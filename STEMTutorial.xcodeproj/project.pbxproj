@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA47F3B51652B2DD00CCE464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B41652B2DD00CCE464 /* UIKit.framework */; };
+		DA47F3B71652B2DD00CCE464 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B61652B2DD00CCE464 /* Foundation.framework */; };
+		DA47F3B91652B2DD00CCE464 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B81652B2DD00CCE464 /* CoreGraphics.framework */; };
+		DA47F3BF1652B2DD00CCE464 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA47F3BD1652B2DD00CCE464 /* InfoPlist.strings */; };
+		DA47F3C11652B2DD00CCE464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA47F3C01652B2DD00CCE464 /* main.m */; };
+		DA47F3C51652B2DD00CCE464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA47F3C41652B2DD00CCE464 /* AppDelegate.m */; };
+		DA47F3C81652B2DD00CCE464 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */; };
+		DA47F3CB1652B2DD00CCE464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA47F3CA1652B2DD00CCE464 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA47F3B01652B2DD00CCE464 /* STEMTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STEMTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA47F3B41652B2DD00CCE464 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA47F3B61652B2DD00CCE464 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA47F3B81652B2DD00CCE464 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA47F3BC1652B2DD00CCE464 /* STEMTutorial-Info.plist */ = {isa = PBXFileReference; path = "STEMTutorial-Info.plist"; sourceTree = "<group>"; };
+		DA47F3BE1652B2DD00CCE464 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA47F3C01652B2DD00CCE464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA47F3C21652B2DD00CCE464 /* STEMTutorial-Prefix.pch */ = {isa = PBXFileReference; path = "STEMTutorial-Prefix.pch"; sourceTree = "<group>"; };
+		DA47F3C31652B2DD00CCE464 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA47F3C41652B2DD00CCE464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA47F3C71652B2DD00CCE464 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA47F3C91652B2DD00CCE464 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		DA47F3CA1652B2DD00CCE464 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA47F3AD1652B2DD00CCE464 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA47F3B51652B2DD00CCE464 /* UIKit.framework in Frameworks */,
+				DA47F3B71652B2DD00CCE464 /* Foundation.framework in Frameworks */,
+				DA47F3B91652B2DD00CCE464 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA47F3A51652B2DD00CCE464 = {
+			isa = PBXGroup;
+			children = (
+				DA47F3BA1652B2DD00CCE464 /* STEMTutorial */,
+				DA47F3B31652B2DD00CCE464 /* Frameworks */,
+				DA47F3B11652B2DD00CCE464 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA47F3B11652B2DD00CCE464 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA47F3B01652B2DD00CCE464 /* STEMTutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA47F3B31652B2DD00CCE464 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA47F3B41652B2DD00CCE464 /* UIKit.framework */,
+				DA47F3B61652B2DD00CCE464 /* Foundation.framework */,
+				DA47F3B81652B2DD00CCE464 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA47F3BA1652B2DD00CCE464 /* STEMTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				DA47F3C31652B2DD00CCE464 /* AppDelegate.h */,
+				DA47F3C41652B2DD00CCE464 /* AppDelegate.m */,
+				DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */,
+				DA47F3C91652B2DD00CCE464 /* ViewController.h */,
+				DA47F3CA1652B2DD00CCE464 /* ViewController.m */,
+				DA47F3BB1652B2DD00CCE464 /* Supporting Files */,
+			);
+			path = STEMTutorial;
+			sourceTree = "<group>";
+		};
+		DA47F3BB1652B2DD00CCE464 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA47F3BC1652B2DD00CCE464 /* STEMTutorial-Info.plist */,
+				DA47F3BD1652B2DD00CCE464 /* InfoPlist.strings */,
+				DA47F3C01652B2DD00CCE464 /* main.m */,
+				DA47F3C21652B2DD00CCE464 /* STEMTutorial-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA47F3AF1652B2DD00CCE464 /* STEMTutorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA47F3CE1652B2DD00CCE464 /* Build configuration list for PBXNativeTarget "STEMTutorial" */;
+			buildPhases = (
+				DA47F3AC1652B2DD00CCE464 /* Sources */,
+				DA47F3AD1652B2DD00CCE464 /* Frameworks */,
+				DA47F3AE1652B2DD00CCE464 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STEMTutorial;
+			productName = STEMTutorial;
+			productReference = DA47F3B01652B2DD00CCE464 /* STEMTutorial.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA47F3A71652B2DD00CCE464 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DA47F3AA1652B2DD00CCE464 /* Build configuration list for PBXProject "STEMTutorial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA47F3A51652B2DD00CCE464;
+			productRefGroup = DA47F3B11652B2DD00CCE464 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA47F3AF1652B2DD00CCE464 /* STEMTutorial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA47F3AE1652B2DD00CCE464 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA47F3BF1652B2DD00CCE464 /* InfoPlist.strings in Resources */,
+				DA47F3C81652B2DD00CCE464 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA47F3AC1652B2DD00CCE464 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA47F3C11652B2DD00CCE464 /* main.m in Sources */,
+				DA47F3C51652B2DD00CCE464 /* AppDelegate.m in Sources */,
+				DA47F3CB1652B2DD00CCE464 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA47F3BD1652B2DD00CCE464 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA47F3BE1652B2DD00CCE464 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA47F3C71652B2DD00CCE464 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA47F3CC1652B2DD00CCE464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA47F3CD1652B2DD00CCE464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA47F3CF1652B2DD00CCE464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STEMTutorial/STEMTutorial-Prefix.pch";
+				INFOPLIST_FILE = "STEMTutorial/STEMTutorial-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA47F3D01652B2DD00CCE464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STEMTutorial/STEMTutorial-Prefix.pch";
+				INFOPLIST_FILE = "STEMTutorial/STEMTutorial-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA47F3AA1652B2DD00CCE464 /* Build configuration list for PBXProject "STEMTutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA47F3CC1652B2DD00CCE464 /* Debug */,
+				DA47F3CD1652B2DD00CCE464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA47F3CE1652B2DD00CCE464 /* Build configuration list for PBXNativeTarget "STEMTutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA47F3CF1652B2DD00CCE464 /* Debug */,
+				DA47F3D01652B2DD00CCE464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA47F3A71652B2DD00CCE464 /* Project object */;
+}
