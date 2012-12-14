@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface algebra2variable : NSObject
+
+//header files algebra difficulty 1
+
 {
     //equation a = y -/+ c
     

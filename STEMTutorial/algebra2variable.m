@@ -8,11 +8,13 @@
 
 #import "algebra2variable.h"
 
+//Implementation for algebra question difficulty 1
 //equations take the format 3=y-2
 // where there 3, '-' and 2 are replacable
 
 @implementation algebra2variable
 
+//getters and setters the answer or the left hand side. 
 -(void)setanswer:(int)answer
 { _answer = answer;
 }
@@ -20,7 +22,7 @@
     return _answer;
 }
 
-
+//getters and setters for the number in the right hand side of the equation
 -(void)setnumber:(int)number
 {
     _number = number;
@@ -30,16 +32,16 @@
     return _number;
 }
 
-
+//sets the sign of the equation. 0 is a plus(+) and 1 is a minus(-)
 -(void)setsignrandom:(int)signrandom
 { _signrandom = signrandom;
 }
 -(int)signrandom{
     return _signrandom;
 }
-// 0 is a plus symbol and 1 is a symbol
 
 
+//creates the string equation to display to the user
 -(NSString *)equation{
     
     if (_signrandom ==0)//so a plus symbol
@@ -53,6 +55,8 @@
     
 }
 
+
+//solves the equation and return the int which represents the answer the user must find.
 -(int)solveEquation
 {
     if (_signrandom == 0)
