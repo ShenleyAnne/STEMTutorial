@@ -23,6 +23,7 @@
 		DA9A67411655835200CC679C /* algebraQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A67401655835200CC679C /* algebraQuizViewController.m */; };
 		DA9A67441655885A00CC679C /* algebra2variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A67431655885A00CC679C /* algebra2variable.m */; };
 		DAA25A8B167B2A91007AA6CD /* AlgebraSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */; };
+		DAA25A8F167B4318007AA6CD /* volAreaQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */; };
 		DAAE0B66165BECCF005EB6DC /* algebra3variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE0B65165BECCF005EB6DC /* algebra3variable.m */; };
 		DAEA69DE1667CF380007BD85 /* algebraDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,8 @@
 		DA9A67431655885A00CC679C /* algebra2variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebra2variable.m; sourceTree = "<group>"; };
 		DAA25A89167B2A91007AA6CD /* AlgebraSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgebraSummaryViewController.h; sourceTree = "<group>"; };
 		DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgebraSummaryViewController.m; sourceTree = "<group>"; };
+		DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = volAreaQuizViewController.h; sourceTree = "<group>"; };
+		DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = volAreaQuizViewController.m; sourceTree = "<group>"; };
 		DAAE0B64165BECCF005EB6DC /* algebra3variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebra3variable.h; sourceTree = "<group>"; };
 		DAAE0B65165BECCF005EB6DC /* algebra3variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebra3variable.m; sourceTree = "<group>"; };
 		DAEA69DC1667CF380007BD85 /* algebraDifficulty3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebraDifficulty3.h; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 				DA9A67421655885A00CC679C /* algebra2variable.h */,
 				DA9A67431655885A00CC679C /* algebra2variable.m */,
 				DA9A673F1655835200CC679C /* algebraQuizViewController.h */,
+				DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */,
+				DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */,
 				DA9A67401655835200CC679C /* algebraQuizViewController.m */,
 				DA48F2361668094E00C2ED7E /* VolAreaDifficulty1.h */,
 				DA48F2371668094E00C2ED7E /* VolAreaDifficulty1.m */,
@@ -219,6 +224,7 @@
 				DA48F2381668094E00C2ED7E /* VolAreaDifficulty1.m in Sources */,
 				DA48F23C16680B1D00C2ED7E /* VolAreaDifficulty2.m in Sources */,
 				DAA25A8B167B2A91007AA6CD /* AlgebraSummaryViewController.m in Sources */,
+				DAA25A8F167B4318007AA6CD /* volAreaQuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
