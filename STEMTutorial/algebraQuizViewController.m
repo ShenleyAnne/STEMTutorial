@@ -10,6 +10,7 @@
 #import "algebra2variable.h"
 #import "algebra3variable.h"
 #import "algebraDifficulty3.h"
+#import "AlgebraSummaryViewController.h"
 #include <stdlib.h>
 
 @implementation algebraQuizViewController
@@ -47,20 +48,6 @@ int correct = 0;
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
 
 - (void)viewDidUnload
 {
@@ -240,7 +227,7 @@ int correct = 0;
         
     [self viewDidLoad];
     }else{
-        
+        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
     }
     
     
@@ -258,13 +245,16 @@ int correct = 0;
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [coorectAnswers setText:(correctCountText)];
+    int *typeQ = arc4random()%3;
+    if (typeQ==0)
+    {
+        [self call2variablealgebra];
+    }else if (typeQ==1){
+        [self call3variablealgerbra];
+    }else{
+        [self calldifficulty3algerbra];
+    }
     
-    
-    //[self call2variablealgebra];
-    //[self call3variablealgerbra];
-    //
-    
-    [self calldifficulty3algerbra];
     [self changeButtonAnswers];
     
     }
@@ -312,5 +302,14 @@ int correct = 0;
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"segueToSummary"]){
+        //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        //AlgebraSummaryViewController *controller = (AlgebraSummaryViewController *)navController.topViewController;
+        AlgebraSummaryViewController *controller = [segue destinationViewController];
+        controller.questionCorrect = correct;
+    }
+
+}
 
 @end
