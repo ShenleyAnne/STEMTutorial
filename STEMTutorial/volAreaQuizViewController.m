@@ -208,10 +208,14 @@ int VAcorrect = 0; //how many question user has gotten correct
 -(void)callDifficulty1{
 
     VolAreaDifficulty1 *question = [[VolAreaDifficulty1 alloc]init];
-    [question setX:(arc4random()%15)];
-    [question setY:(arc4random()%15)];
+    [question setX:((arc4random()%15)+1)];
+    NSLog([NSString stringWithFormat:@"x: %d", [question x]]);
+    [question setY:((arc4random()%15)+1)];
+    NSLog([NSString stringWithFormat:@"y: %d", [question y]]);
     [question setShape:(arc4random()%4)];
-    VAcorrectanswer = [question area];
+    NSLog([NSString stringWithFormat:@"shape: %d", [question shape]]);
+    VAcorrectanswer = [question solveArea];
+    NSLog([NSString stringWithFormat:@"area: %d", VAcorrectanswer]);
     [questionTextfield setText:([question question])];
     
      

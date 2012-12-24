@@ -28,8 +28,8 @@
 -(void)setY:(int)y;
 -(int)y;
 
--(void)setArea:(float)area;
--(float)area;
+
+-(float)solveArea;
 
 -(NSString *)question;
 
