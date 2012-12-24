@@ -32,7 +32,7 @@
     return _y;
 }
 
--(void)setArea:(int)area
+-(void)setArea:(float)area
 {
     float r = _x/2;
     // 0 square, 1 rectangle, 2 equalatrial triangle, 3 circle

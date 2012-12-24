@@ -16,11 +16,13 @@
 @property (strong, nonatomic) IBOutlet UITextView *questionTextfield; //label to display the question
 @property (strong, nonatomic) IBOutlet UIButton *answerAbuttontext;
 @property (strong, nonatomic) IBOutlet UIButton *answerbbuttontext;
-@property (strong, nonatomic) IBOutlet UIButton *answercbuttontext;
+@property (strong, nonatomic) IBOutlet UIButton *answercbuttontext2;
+
 @property (strong, nonatomic) IBOutlet UIButton *answerdbuttontext; //answer buttons - outlet for text etc
 - (IBAction)answerAButton:(id)sender;
 - (IBAction)answerBbutton:(id)sender;
-- (IBAction)answerCbutton:(id)sender;
+- (IBAction)answerCButton2:(id)sender;
+
 - (IBAction)answerDbutton:(id)sender; //answer buttons - action
 
 

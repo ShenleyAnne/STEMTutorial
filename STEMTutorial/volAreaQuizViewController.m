@@ -7,6 +7,7 @@
 //
 
 #import "volAreaQuizViewController.h"
+#import "VolAreaDifficulty1.h"
 
 @implementation volAreaQuizViewController
 @synthesize correctAnswer;
@@ -14,10 +15,10 @@
 @synthesize questionTextfield;
 @synthesize answerAbuttontext;
 @synthesize answerbbuttontext;
-@synthesize answercbuttontext;
+@synthesize answercbuttontext2;
 @synthesize answerdbuttontext;
 
-int VAcorrectanswer = 0; //correct answer defined here, set in each method
+float VAcorrectanswer = 0; //correct answer defined here, set in each method
 int VAquestionCount = 1; //what question number user is on
 int VAcorrect = 0; //how many question user has gotten correct
 
@@ -47,13 +48,10 @@ int VAcorrect = 0; //how many question user has gotten correct
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
+  
+
 
 - (void)viewDidUnload
 {
@@ -62,8 +60,8 @@ int VAcorrect = 0; //how many question user has gotten correct
     [self setQuestionTextfield:nil];
     [self setAnswerAbuttontext:nil];
     [self setAnswerbbuttontext:nil];
-    [self setAnswercbuttontext:nil];
     [self setAnswerdbuttontext:nil];
+    [self setAnswercbuttontext2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -108,7 +106,7 @@ int VAcorrect = 0; //how many question user has gotten correct
         
         [answerAbuttontext setTitle:(answer) forState:(UIControlStateNormal)];
         [answerbbuttontext setTitle:(otheran1) forState:(UIControlStateNormal)];
-        [answercbuttontext setTitle:(otheran2) forState:(UIControlStateNormal)];
+        [answercbuttontext2 setTitle:(otheran2) forState:(UIControlStateNormal)];
         [answerdbuttontext setTitle:(otheran3) forState:(UIControlStateNormal)];
         
         
@@ -116,11 +114,11 @@ int VAcorrect = 0; //how many question user has gotten correct
         
         [answerbbuttontext setTitle:(answer) forState:(UIControlStateNormal)];
         [answerAbuttontext setTitle:(otheran1) forState:(UIControlStateNormal)];
-        [answercbuttontext setTitle:(otheran2) forState:(UIControlStateNormal)];
+        [answercbuttontext2 setTitle:(otheran2) forState:(UIControlStateNormal)];
         [answerdbuttontext setTitle:(otheran3) forState:(UIControlStateNormal)];
         
     }else if (i==3){
-        [answercbuttontext setTitle:(answer) forState:(UIControlStateNormal)];
+        [answercbuttontext2 setTitle:(answer) forState:(UIControlStateNormal)];
         [answerbbuttontext setTitle:(otheran1) forState:(UIControlStateNormal)];
         [answerAbuttontext setTitle:(otheran2) forState:(UIControlStateNormal)];
         [answerdbuttontext setTitle:(otheran3) forState:(UIControlStateNormal)];
@@ -128,13 +126,13 @@ int VAcorrect = 0; //how many question user has gotten correct
     }else if (i==4){
         [answerdbuttontext setTitle:(answer) forState:(UIControlStateNormal)];
         [answerbbuttontext setTitle:(otheran1) forState:(UIControlStateNormal)];
-        [answercbuttontext setTitle:(otheran2) forState:(UIControlStateNormal)];
+        [answercbuttontext2 setTitle:(otheran2) forState:(UIControlStateNormal)];
         [answerAbuttontext setTitle:(otheran3) forState:(UIControlStateNormal)];
         
     }else{
         [answerAbuttontext setTitle:(answer) forState:(UIControlStateNormal)];
         [answerbbuttontext setTitle:(otheran1) forState:(UIControlStateNormal)];
-        [answercbuttontext setTitle:(otheran2) forState:(UIControlStateNormal)];
+        [answercbuttontext2 setTitle:(otheran2) forState:(UIControlStateNormal)];
         [answerdbuttontext setTitle:(otheran3) forState:(UIControlStateNormal)];
     }  
 }
@@ -180,11 +178,8 @@ int VAcorrect = 0; //how many question user has gotten correct
     }
 }
 
-
-
-- (IBAction)answerCbutton:(id)sender {
-    
-    int buttonValue = answercbuttontext.currentTitle.intValue;
+- (IBAction)answerCButton2:(id)sender {
+    int buttonValue = answercbuttontext2.currentTitle.intValue;
     if (buttonValue==VAcorrectanswer)
     {
         [self loadrightbox];
@@ -193,6 +188,10 @@ int VAcorrect = 0; //how many question user has gotten correct
         [self loadwrongbox];
     }
 }
+
+
+
+
 
 - (IBAction)answerDbutton:(id)sender {
     
@@ -205,4 +204,33 @@ int VAcorrect = 0; //how many question user has gotten correct
         [self loadwrongbox];
     }
 }
+
+-(void)callDifficulty1{
+
+    VolAreaDifficulty1 *question = [[VolAreaDifficulty1 alloc]init];
+    [question setX:(arc4random()%15)];
+    [question setY:(arc4random()%15)];
+    [question setShape:(arc4random()%4)];
+    VAcorrectanswer = [question area];
+    [questionTextfield setText:([question question])];
+    
+     
+}
+
+- (void)viewDidLoad
+{
+    NSString *qnumstring = [NSString stringWithFormat:@"%d", VAquestionCount];
+    NSString *qscorrect = [NSString stringWithFormat:@"%d/15", VAcorrect];
+    NSString *question = @"Question: ";
+    NSString *correctString = @"Correct ";
+    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
+    NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
+    [questionNumber setText:(textQuestionNumber)];
+    [correctAnswer setText:(correctCountText)];
+    [self callDifficulty1];
+    [self changeButtonAnswers];
+    
+    
+}
+
 @end

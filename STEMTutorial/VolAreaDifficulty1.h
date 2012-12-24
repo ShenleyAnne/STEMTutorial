@@ -11,7 +11,7 @@
 @interface VolAreaDifficulty1 : NSObject
 
 {
-    int _shape; // 0 square, 1 rectangle, 2 equalatrial triangle
+    int _shape; // 0 square, 1 rectangle, 2 equalatrial triangle, 3 circle
     int _x; //base
     int _y; //height
     int _area; //answer
@@ -28,8 +28,8 @@
 -(void)setY:(int)y;
 -(int)y;
 
--(void)setArea:(int)area;
--(int)area;
+-(void)setArea:(float)area;
+-(float)area;
 
 -(NSString *)question;
 
