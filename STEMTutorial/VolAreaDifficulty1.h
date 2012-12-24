@@ -16,6 +16,7 @@
     int _y; //height
     int _area; //answer
     
+    
 }
 
 -(void)setShape:(int)shape;
@@ -29,5 +30,7 @@
 
 -(void)setArea:(int)area;
 -(int)area;
+
+-(NSString *)question;
 
 @end

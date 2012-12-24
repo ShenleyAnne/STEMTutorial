@@ -371,7 +371,7 @@
                                 </state>
                                 <connections>
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="WZB-v6-Z3V"/>
-                                    <action selector="answerCbutton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="MKz-MG-EhP"/>
+                                    <action selector="answerCbutton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="VXK-LB-xgy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oSG-2L-hWR">
@@ -734,6 +734,55 @@
     <resources>
         <image name="chalkboard.jpg" width="1269" height="948"/>
     </resources>
+    <classes>
+        <class className="AlgebraSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlgebraSummaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="retryButton:"/>
+                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="algebraOptionsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraOptionsViewController.h"/>
+        </class>
+        <class className="algebraQuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraQuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerAButton:"/>
+                <relationship kind="action" name="answerBbutton:"/>
+                <relationship kind="action" name="answerCbutton:"/>
+                <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="coorectAnswers" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="volAreaQuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/volAreaQuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerAButton:"/>
+                <relationship kind="action" name="answerBbutton:"/>
+                <relationship kind="action" name="answerCbutton:"/>
+                <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="correctAnswer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

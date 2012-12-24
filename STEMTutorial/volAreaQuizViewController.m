@@ -157,14 +157,52 @@ int VAcorrect = 0; //how many question user has gotten correct
 }
 
 - (IBAction)answerAButton:(id)sender {
+    
+    int buttonValue = answerAbuttontext.currentTitle.intValue;
+    if (buttonValue==VAcorrectanswer)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
 }
 
 - (IBAction)answerBbutton:(id)sender {
+    
+    int buttonValue = answerbbuttontext.currentTitle.intValue;
+    if (buttonValue==VAcorrectanswer)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
 }
 
+
+
 - (IBAction)answerCbutton:(id)sender {
+    
+    int buttonValue = answercbuttontext.currentTitle.intValue;
+    if (buttonValue==VAcorrectanswer)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
 }
 
 - (IBAction)answerDbutton:(id)sender {
+    
+    int buttonValue = answerdbuttontext.currentTitle.intValue;
+    if (buttonValue== VAcorrectanswer)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
 }
 @end

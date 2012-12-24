@@ -227,6 +227,8 @@ int correct = 0;
         
     [self viewDidLoad];
     }else{
+        questionCount=1;
+        correct = 0;
         [self performSegueWithIdentifier:@"segueToSummary" sender:self];
     }
     
