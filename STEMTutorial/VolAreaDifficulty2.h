@@ -36,10 +36,10 @@
 -(void)setZ:(int)z;
 -(int)z;
 
--(void)setArea:(float)area;
--(float)area;
+-(float)solveArea;
 
--(void)setVolume:(float)volume;
--(float)volume;
+-(float)solveVolume;
+
+-(NSString *)question;
 
 @end

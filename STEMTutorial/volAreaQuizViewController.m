@@ -18,7 +18,7 @@
 @synthesize answercbuttontext2;
 @synthesize answerdbuttontext;
 
-float VAcorrectanswer = 0; //correct answer defined here, set in each method
+float VAcorrectanswer; //correct answer defined here, set in each method
 int VAquestionCount = 1; //what question number user is on
 int VAcorrect = 0; //how many question user has gotten correct
 
@@ -100,7 +100,7 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%d", VAcorrectanswer];
+    NSString *answer = [NSString stringWithFormat:@"%f", VAcorrectanswer];
     if (i==1)
     {
         
@@ -209,13 +209,9 @@ int VAcorrect = 0; //how many question user has gotten correct
 
     VolAreaDifficulty1 *question = [[VolAreaDifficulty1 alloc]init];
     [question setX:((arc4random()%15)+1)];
-    NSLog([NSString stringWithFormat:@"x: %d", [question x]]);
     [question setY:((arc4random()%15)+1)];
-    NSLog([NSString stringWithFormat:@"y: %d", [question y]]);
     [question setShape:(arc4random()%4)];
-    NSLog([NSString stringWithFormat:@"shape: %d", [question shape]]);
     VAcorrectanswer = [question solveArea];
-    NSLog([NSString stringWithFormat:@"area: %d", VAcorrectanswer]);
     [questionTextfield setText:([question question])];
     
      

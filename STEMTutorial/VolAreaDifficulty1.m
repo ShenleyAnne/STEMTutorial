@@ -32,7 +32,7 @@
     return _y;
 }
 
--(int)solveArea
+-(float)solveArea
 {
     float r = _x/2;
     // 0 square, 1 rectangle, 2 equalatrial triangle, 3 circle
@@ -40,21 +40,25 @@
     {
         _area =(_x*_y)/2;
         NSLog(@"triangle");
+        return _area;
        
     }else if(_shape==3){
-        M_PI * pow(r,2);
+        _area = M_PI * pow(r,2);
         NSLog(@"circle");
+        return _area;
        
     }else if (_shape==1){
         _area = (_x*_y);
         NSLog(@"rectangle");
+        return _area;
         
     }else if(_shape==0){
         _area = _x * _x;
         NSLog(@"Square");
+        return _area;
         
     }
-    return _area;
+    
 }
 
 
