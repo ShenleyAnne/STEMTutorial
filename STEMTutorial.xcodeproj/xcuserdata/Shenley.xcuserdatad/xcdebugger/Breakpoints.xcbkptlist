@@ -149,11 +149,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "STEMTutorial/volAreaQuizViewController.m"
-         timestampString = "378040362.609886"
+         timestampString = "378579257.175274"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "-didReceiveMemoryWarning"
          landmarkType = "5">
       </FileBreakpoint>
@@ -163,25 +163,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "STEMTutorial/volAreaQuizViewController.m"
-         timestampString = "378334332.711823"
+         timestampString = "378579257.175274"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "-changeButtonAnswers"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "STEMTutorial/volAreaQuizViewController.m"
-         timestampString = "378334341.827323"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
          landmarkName = "-changeButtonAnswers"
          landmarkType = "5">
       </FileBreakpoint>

@@ -8,6 +8,7 @@
 
 #import "volAreaQuizViewController.h"
 #import "VolAreaDifficulty1.h"
+#import "VolAreaDifficulty2.h"
 
 @implementation volAreaQuizViewController
 @synthesize correctAnswer;
@@ -217,6 +218,24 @@ int VAcorrect = 0; //how many question user has gotten correct
      
 }
 
+-(void)callDifficulty2{
+    VolAreaDifficulty2 *question = [[VolAreaDifficulty2 alloc] init];
+    [question setX:((arc4random()%15)+1)];
+    [question setY:((arc4random()%15)+1)];
+    [question setZ:((arc4random()%15)+1)];
+    [question setShape:(arc4random()%4)];
+    int type = arc4random()%2;
+    if (type ==0){
+        //a volume question
+        VAcorrectanswer = [question solveVolume];
+        [questionTextfield setText:([question questionVOLUME])];
+    } else {
+    //an area question
+        VAcorrectanswer = [question solveArea];
+        [questionTextfield setText:([question questionAREA])];
+    }
+}
+
 - (void)viewDidLoad
 {
     NSString *qnumstring = [NSString stringWithFormat:@"%d", VAquestionCount];
@@ -227,7 +246,8 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    [self callDifficulty1];
+    //[self callDifficulty1];
+    [self callDifficulty2];
     [self changeButtonAnswers];
     
     

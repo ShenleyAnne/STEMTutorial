@@ -40,6 +40,7 @@
 
 -(float)solveVolume;
 
--(NSString *)question;
+-(NSString *)questionAREA;
+-(NSString *)questionVOLUME;
 
 @end

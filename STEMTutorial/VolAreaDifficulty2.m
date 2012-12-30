@@ -103,6 +103,41 @@
     }
 }
 
+-(NSString *)questionAREA
+{
+    if (_shape==0)
+    {
+    return [NSString stringWithFormat:@"Find the surface area of a cylinder with a radius of %d cm and height of %d cm",(_x/2),_y];
+    } else if (_shape ==1)
+    {
+        return [NSString stringWithFormat:@"Find the surface area of a square based pyramid with a base of %d cm and a slant height of %d cm",_x,_z];
+    }else if (_shape==2)
+    {
+        return [NSString stringWithFormat:@"Find the surface area of a cube with a base of %d cm",_x];
+    }else if (_shape ==3)
+    {
+        return [NSString stringWithFormat:@"Find the surface area of a cone with a radius of %d cm and a slant height of %d cm",(_x/2),_z];
+    }
+}
+
+-(NSString *) questionVOLUME
+{
+    if (_shape==0)
+    {
+        return [NSString stringWithFormat:@"Find the volume of a cylinder with a radius of %d cm and height of %d cm",(_x/2),_y];
+    } else if (_shape ==1)
+    {
+        return [NSString stringWithFormat:@"Find the volume of a square based pyramid with a base of %d cm and a height of %d cm",_x,_y];
+    }else if (_shape==2)
+    {
+        return [NSString stringWithFormat:@"Find the volume of a cube with a base of %d cm",_x];
+    }else if (_shape ==3)
+    {
+        return [NSString stringWithFormat:@"Find the surface area of a cone with a radius of %d cm and a height of %d cm",(_x/2),_y];
+    }
+
+}
+
 
 
 @end
