@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA220E8D1695DAAC004A58D6 /* trigQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */; };
+		DA220E911695E7EC004A58D6 /* trigDifficulty1.m in Sources */ = {isa = PBXBuildFile; fileRef = DA220E901695E7EC004A58D6 /* trigDifficulty1.m */; };
 		DA47F3B51652B2DD00CCE464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B41652B2DD00CCE464 /* UIKit.framework */; };
 		DA47F3B71652B2DD00CCE464 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B61652B2DD00CCE464 /* Foundation.framework */; };
 		DA47F3B91652B2DD00CCE464 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47F3B81652B2DD00CCE464 /* CoreGraphics.framework */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA220E8B1695DAAC004A58D6 /* trigQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigQuizViewController.h; sourceTree = "<group>"; };
+		DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigQuizViewController.m; sourceTree = "<group>"; };
+		DA220E8F1695E7EC004A58D6 /* trigDifficulty1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigDifficulty1.h; sourceTree = "<group>"; };
+		DA220E901695E7EC004A58D6 /* trigDifficulty1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulty1.m; sourceTree = "<group>"; };
 		DA47F3B01652B2DD00CCE464 /* STEMTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STEMTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA47F3B41652B2DD00CCE464 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA47F3B61652B2DD00CCE464 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,14 +114,18 @@
 		DA47F3BA1652B2DD00CCE464 /* STEMTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				DA220E8F1695E7EC004A58D6 /* trigDifficulty1.h */,
+				DA220E901695E7EC004A58D6 /* trigDifficulty1.m */,
+				DA220E8B1695DAAC004A58D6 /* trigQuizViewController.h */,
+				DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */,
 				DA47F3C31652B2DD00CCE464 /* AppDelegate.h */,
 				DA47F3C41652B2DD00CCE464 /* AppDelegate.m */,
 				DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */,
 				DA9A67421655885A00CC679C /* algebra2variable.h */,
 				DA9A67431655885A00CC679C /* algebra2variable.m */,
-				DA9A673F1655835200CC679C /* algebraQuizViewController.h */,
 				DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */,
 				DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */,
+				DA9A673F1655835200CC679C /* algebraQuizViewController.h */,
 				DA9A67401655835200CC679C /* algebraQuizViewController.m */,
 				DA48F2361668094E00C2ED7E /* VolAreaDifficulty1.h */,
 				DA48F2371668094E00C2ED7E /* VolAreaDifficulty1.m */,
@@ -225,6 +235,8 @@
 				DA48F23C16680B1D00C2ED7E /* VolAreaDifficulty2.m in Sources */,
 				DAA25A8B167B2A91007AA6CD /* AlgebraSummaryViewController.m in Sources */,
 				DAA25A8F167B4318007AA6CD /* volAreaQuizViewController.m in Sources */,
+				DA220E8D1695DAAC004A58D6 /* trigQuizViewController.m in Sources */,
+				DA220E911695E7EC004A58D6 /* trigDifficulty1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

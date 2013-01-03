@@ -176,6 +176,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TaU-lt-5iK" kind="push" id="Zvv-i5-2bD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -184,6 +187,127 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1435" y="442"/>
+        </scene>
+        <scene sceneID="pyi-Bd-6Ez">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vab-fu-KRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="TrigQuizViewConroller" id="TaU-lt-5iK" customClass="trigQuizViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2r-a9-ZaA">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="sGi-Tg-FUV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hhk-DW-LUX">
+                                <rect key="frame" x="84" y="374" width="152" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Answer D">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="a5a-C7-2Cj"/>
+                                    <action selector="answerDbutton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="RVq-kF-4zQ"/>
+                                    <action selector="answerDbutton:" destination="TaU-lt-5iK" eventType="touchUpInside" id="b5v-3J-fOW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WmX-U8-2Q8">
+                                <rect key="frame" x="84" y="330" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Answer C">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="0sa-3m-NQN"/>
+                                    <action selector="answerBbutton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="D2x-ZT-za8"/>
+                                    <action selector="answerCButton2:" destination="amQ-ec-Prv" eventType="touchUpInside" id="Xnn-d3-QYk"/>
+                                    <action selector="answerCbutton:" destination="TaU-lt-5iK" eventType="touchUpInside" id="kPr-1Y-fE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xfR-LL-X4O">
+                                <rect key="frame" x="84" y="247" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Answer A">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="aZL-UH-Nz7"/>
+                                    <action selector="answerAButton:" destination="TaU-lt-5iK" eventType="touchUpInside" id="owf-YJ-AJm"/>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="upE-uE-Unt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EYC-yc-ao8">
+                                <rect key="frame" x="84" y="285" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Answer B">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="E1h-zV-lGg"/>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="l6o-NT-Wf6"/>
+                                    <action selector="answerAButton:" destination="TaU-lt-5iK" eventType="touchUpInside" id="u5B-UK-Tjc"/>
+                                    <action selector="answerBButton2:" destination="TaU-lt-5iK" eventType="touchUpInside" id="f5J-VW-fgo"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Question here" textAlignment="center" id="3kk-to-epq">
+                                <rect key="frame" x="9" y="89" width="303" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Correct" lineBreakMode="tailTruncation" minimumFontSize="10" id="mEv-TH-1yd">
+                                <rect key="frame" x="212" y="0.0" width="100" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q num" lineBreakMode="tailTruncation" minimumFontSize="10" id="lf2-zA-gBo">
+                                <rect key="frame" x="14" y="0.0" width="100" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qjK-YF-fmf"/>
+                    <connections>
+                        <outlet property="answerAbuttontext" destination="xfR-LL-X4O" id="i9Y-qT-RrY"/>
+                        <outlet property="answerBButton2" destination="EYC-yc-ao8" id="Aco-tU-dZr"/>
+                        <outlet property="answerbbuttontext" destination="EYC-yc-ao8" id="tgX-Pc-2Bx"/>
+                        <outlet property="answercbuttontext" destination="WmX-U8-2Q8" id="U5h-C4-RkR"/>
+                        <outlet property="answerdbuttontext" destination="hhk-DW-LUX" id="9us-7h-shk"/>
+                        <outlet property="correctAnswer" destination="mEv-TH-1yd" id="8Bq-Oz-nue"/>
+                        <outlet property="questionNumber" destination="lf2-zA-gBo" id="kC4-RW-dEI"/>
+                        <outlet property="questionTextField" destination="3kk-to-epq" id="6TW-fh-ytI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1971" y="842"/>
         </scene>
         <scene sceneID="cxk-cm-FKN">
             <objects>
@@ -734,55 +858,6 @@
     <resources>
         <image name="chalkboard.jpg" width="1269" height="948"/>
     </resources>
-    <classes>
-        <class className="AlgebraSummaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlgebraSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButton:"/>
-                <relationship kind="action" name="retryButton:"/>
-                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-        <class className="algebraOptionsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraOptionsViewController.h"/>
-        </class>
-        <class className="algebraQuizViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraQuizViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answerAButton:"/>
-                <relationship kind="action" name="answerBbutton:"/>
-                <relationship kind="action" name="answerCbutton:"/>
-                <relationship kind="action" name="answerDbutton:"/>
-                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="coorectAnswers" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="volAreaQuizViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/volAreaQuizViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answerAButton:"/>
-                <relationship kind="action" name="answerBbutton:"/>
-                <relationship kind="action" name="answerCButton2:"/>
-                <relationship kind="action" name="answerDbutton:"/>
-                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answercbuttontext2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="correctAnswer" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
