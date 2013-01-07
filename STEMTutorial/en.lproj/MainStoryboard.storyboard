@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M07-Ps-26C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M07-Ps-26C">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -297,7 +297,6 @@
                     <navigationItem key="navigationItem" id="qjK-YF-fmf"/>
                     <connections>
                         <outlet property="answerAbuttontext" destination="xfR-LL-X4O" id="i9Y-qT-RrY"/>
-                        <outlet property="answerBButton2" destination="EYC-yc-ao8" id="Aco-tU-dZr"/>
                         <outlet property="answerbbuttontext" destination="EYC-yc-ao8" id="tgX-Pc-2Bx"/>
                         <outlet property="answercbuttontext" destination="WmX-U8-2Q8" id="U5h-C4-RkR"/>
                         <outlet property="answerdbuttontext" destination="hhk-DW-LUX" id="9us-7h-shk"/>
@@ -858,6 +857,71 @@
     <resources>
         <image name="chalkboard.jpg" width="1269" height="948"/>
     </resources>
+    <classes>
+        <class className="AlgebraSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlgebraSummaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="retryButton:"/>
+                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="algebraOptionsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraOptionsViewController.h"/>
+        </class>
+        <class className="algebraQuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/algebraQuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerAButton:"/>
+                <relationship kind="action" name="answerBbutton:"/>
+                <relationship kind="action" name="answerCbutton:"/>
+                <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="coorectAnswers" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="trigQuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/trigQuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerAButton:"/>
+                <relationship kind="action" name="answerBButton2:"/>
+                <relationship kind="action" name="answerCbutton:"/>
+                <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="correctAnswer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="volAreaQuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/volAreaQuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerAButton:"/>
+                <relationship kind="action" name="answerBbutton:"/>
+                <relationship kind="action" name="answerCButton2:"/>
+                <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answercbuttontext2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerdbuttontext" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="correctAnswer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
