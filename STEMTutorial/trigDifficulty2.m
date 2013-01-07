@@ -36,7 +36,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleA;
                 //find Y where angle A is something and x is. TOA, tan(angle)=x/y
                 _answer=_x/tan(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleA];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleA];
                 
             }else
             {
@@ -44,7 +44,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleA;
                 //find Z where angle A is something and x is. SOH, sin(angle)=x/z
                 _answer=_x/sin(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleA];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleA];
                 
             }
             
@@ -57,7 +57,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleB;
                 //find Y where angle A is something and x is. TOA, tan(angle)=x/y
                 _answer=_x/tan(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleB];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleB];
                 
             }else
             {
@@ -65,7 +65,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleB;
                 //find Z where angle A is something and x is. CAH, cos(angle)=x/z
                 _answer=_x/cos(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleB];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_x,_angleB];
                 
             }
         }
@@ -83,7 +83,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleA;
                 //find X where angle A is something and Y is. TOA, tan(angle)=x/y
                 _answer=_y/tan(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_y,_angleA];
+               return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle A is %d",_y,_angleA];
                 
             }else
             {
@@ -91,7 +91,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleA;
                 //find Z where angle A is something and Y is. CAH, cos(angle)=x/z
                 _answer=_y/cos(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_y,_angleA];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle A is %d",_y,_angleA];
                 
             }
             
@@ -105,7 +105,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleB;
                 //find X where angle B is something and Y is. TOA, tan(angle)=y/x
                 _answer=_y/tan(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle B is %d",_y,_angleB];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the x is %d cm and angle B is %d",_y,_angleB];
                 
             }else
             {
@@ -113,7 +113,7 @@
                 double degreesToRadians = 2 * M_PI/ 360 * _angleB;
                 //find Z where angle B is something and Y is. SOH, sin(angle)=y/z
                 _answer=_y/sin(degreesToRadians);
-                [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle B is %d",_y,_angleB];
+                return [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the x is %d cm and angle B is %d",_y,_angleB];
                 
             }
         }
@@ -126,8 +126,44 @@
         if(whichAngle==0)
         {
             _angleA = angle;
+            
+            if (toFind==0)
+            {
+                //convert from degrees to rads
+                double degreesToRadians = 2 * M_PI/ 360 * _angleA;
+                //find X where angle A is something and Z is. SOH, tan(angle)=x/z
+                _answer=_z*sin(degreesToRadians);
+                return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the z is %d cm and angle A is %d",_z,_angleA];
+                
+            }else
+            {
+                //convert from degrees to rads
+                double degreesToRadians = 2 * M_PI/ 360 * _angleA;
+                //find Z where angle B is something and Y is. CAH, cos(angle)=y/z
+                _answer=_z*cos(degreesToRadians);
+                return [NSString stringWithFormat:@"Find the length of the side labelled Z in the right angled triangle where the z is %d cm and angle A is %d",_z,_angleA];
+                
+            }
         }else{
             _angleB=angle;
+            if (toFind==0)
+            {
+                //convert from degrees to rads
+                double degreesToRadians = 2 * M_PI/ 360 * _angleB;
+                //find Y where angle B is something and Z is. SOH, sin(angle)=y/z
+                _answer=_z*sin(degreesToRadians);
+                return [NSString stringWithFormat:@"Find the length of the side labelled Y in the right angled triangle where the z is %d cm and angle B is %d",_z,_angleB];
+                
+            }else
+            {
+                //convert from degrees to rads
+                double degreesToRadians = 2 * M_PI/ 360 * _angleA;
+                //find X where angle B is something and z is. CAH, cos(angle)=x/z
+                _answer=_z*cos(degreesToRadians);
+                return [NSString stringWithFormat:@"Find the length of the side labelled X in the right angled triangle where the z is %d cm and angle A is %d",_z,_angleB];
+                
+            }
+            
         }
         
         
@@ -135,7 +171,6 @@
     
     
    
-        return true;
     
 }
 
