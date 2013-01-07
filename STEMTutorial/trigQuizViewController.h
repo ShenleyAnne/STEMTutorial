@@ -18,7 +18,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *answercbuttontext;
 @property (strong, nonatomic) IBOutlet UIButton *answerdbuttontext;
 
-
 - (IBAction)answerAButton:(id)sender;
 - (IBAction)answerCbutton:(id)sender;
 - (IBAction)answerDbutton:(id)sender;

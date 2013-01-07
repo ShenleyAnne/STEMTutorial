@@ -86,7 +86,7 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%d", trigcorrectanswer];
+    NSString *answer = [NSString stringWithFormat:@"%f", trigcorrectanswer];
     if (i==1)
     {
         
@@ -150,6 +150,9 @@ int trigcorrect = 0; //how many question answered correctly
     [question setY:((arc4random()%15)+1)];
     trigcorrectanswer=[question solveZ];
     [questionTextField setText:([question question])];
+    NSString *mystring =[NSString stringWithFormat:@"%f",trigcorrectanswer];
+   // NSLog(@"Correct answer");
+   // NSLog(mystring);
     
 }
 

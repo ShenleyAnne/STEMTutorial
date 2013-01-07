@@ -16,14 +16,14 @@
     /*
      
      trig ratios in a right angle triangle
-     
+    ANGLE A 
      . 
      . .
   y->.   .  
      .    .   <-Z
      .      .
      .-        . 
-     ..|.........
+     ..|......... ANGLE B
      ^
      |
      x
@@ -36,17 +36,17 @@
     int _y;
     int _angleA;
     int _angleB;
-    int sohcahtoaTYPE;
+    float _answer;
     
 }
 
-//create an triangle where you have to work out a side.
--(Boolean)createTriangleSA:(int)side:(int)angle;
+//create an triangle where you have to work out a side. returns the question
+-(NSString *)createTriangleSA:(int)side:(int)angle;
 
 
--(NSString *)question;
+//-(NSString *)question;
 
--(float)solveQuestion;
+-(float)answer;
 
 
 @end
