@@ -44,8 +44,6 @@
 -(NSString *)createTriangleSA:(int)side:(int)angle;
 
 
-//-(NSString *)question;
-
 -(float)answer;
 
 

@@ -8,6 +8,8 @@
 
 #import "trigQuizViewController.h"
 #import "trigDifficulty1.h"
+#import "trigDifficulty2.h"
+#import "trigDifficulty3.h"
 
 @implementation trigQuizViewController
 @synthesize questionNumber;
@@ -140,6 +142,25 @@ int trigcorrect = 0; //how many question answered correctly
     
 }
 
+-(void)callTrigD2
+{
+    trigDifficulty2 *question = [[trigDifficulty2 alloc]init];
+    [questionTextField setText:[question createTriangleSA:((arc4random()%15)+1) :((arc4random()%90)+1)]];
+    trigcorrectanswer  = [question answer];
+    
+                                
+    
+}
+
+-(void)callTrigD3
+{
+    
+    trigDifficulty3 *question = [[trigDifficulty3 alloc]init];
+    [questionTextField setText:[question createTriangle:((arc4random()%15)+1) :((arc4random()%15)+1)]];
+    trigcorrectanswer = [question answer];
+    
+}
+
  
 
 -(void)callTrigD1{
@@ -150,9 +171,6 @@ int trigcorrect = 0; //how many question answered correctly
     [question setY:((arc4random()%15)+1)];
     trigcorrectanswer=[question solveZ];
     [questionTextField setText:([question question])];
-    NSString *mystring =[NSString stringWithFormat:@"%f",trigcorrectanswer];
-   // NSLog(@"Correct answer");
-   // NSLog(mystring);
     
 }
 
@@ -168,7 +186,8 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    [self callTrigD1];
+    [self callTrigD2];
+    //[self callTrigD1];
     /*
     int *typeQ = arc4random()%3;
     if (typeQ==0)
