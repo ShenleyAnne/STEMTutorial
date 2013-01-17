@@ -2,12 +2,19 @@
 //  trigSummaryViewController.h
 //  STEMTutorial
 //
-//  Created by Shenley Gallimore on 11/01/2013.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//  Created by Shenley Gallimore on 16/01/2013.
+//
 //
 
 #import <UIKit/UIKit.h>
 
-@interface trigSummaryViewController : UIView
+@interface trigSummaryViewController : UIViewController
+
+@property(nonatomic) int questionCorrect;
+
+@property (strong, nonatomic) IBOutlet UITextView *summaryLabel;
+@property (strong, nonatomic) IBOutlet UILabel *correctLabel;
+- (IBAction)retryButton:(id)sender;
+- (IBAction)menuButton:(id)sender;
 
 @end

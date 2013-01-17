@@ -10,6 +10,7 @@
 #import "trigDifficulty1.h"
 #import "trigDifficulty2.h"
 #import "trigDifficulty3.h"
+#import "trigSummaryViewController.h"
 
 @implementation trigQuizViewController
 @synthesize questionNumber;
@@ -21,7 +22,7 @@
 @synthesize answerdbuttontext;
 
 
-float trigcorrectanswer = 0; //correct answer defined here, set in each method
+int trigcorrectanswer = 0; //correct answer defined here, set in each method
 int trigquestionCount = 1; //how many questions answered
 int trigcorrect = 0; //how many question answered correctly
 
@@ -88,7 +89,7 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%f", trigcorrectanswer];
+    NSString *answer = [NSString stringWithFormat:@"%d", trigcorrectanswer];
     if (i==1)
     {
         
@@ -134,9 +135,10 @@ int trigcorrect = 0; //how many question answered correctly
         
         [self viewDidLoad];
     }else{
+    
+        [self performSegueWithIdentifier:@"segueToTrigSummary" sender:self];
         trigquestionCount=1;
         trigcorrect = 0;
-       // [self performSegueWithIdentifier:@"segueToSummary" sender:self];
     }
     
     
@@ -186,7 +188,7 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    [self callTrigD2];
+    [self callTrigD3];
     //[self callTrigD1];
     /*
     int *typeQ = arc4random()%3;
@@ -206,7 +208,7 @@ int trigcorrect = 0; //how many question answered correctly
 
 
 -(IBAction)answerAButton:(id)sender {
-    float buttonValue = answerAbuttontext.currentTitle.floatValue;
+    float buttonValue = answerAbuttontext.currentTitle.integerValue;
     if (buttonValue==trigcorrectanswer)
     {
         [self loadrightbox];
@@ -218,7 +220,7 @@ int trigcorrect = 0; //how many question answered correctly
 
 
 - (IBAction)answerBButton2:(id)sender {
-    float buttonValue = answerbbuttontext.currentTitle.floatValue;
+    float buttonValue = answerbbuttontext.currentTitle.integerValue;
     if (buttonValue==trigcorrectanswer)
     {
         [self loadrightbox];
@@ -228,7 +230,7 @@ int trigcorrect = 0; //how many question answered correctly
 }
 
 - (IBAction)answerCbutton:(id)sender {
-    float buttonValue = answercbuttontext.currentTitle.floatValue;
+    float buttonValue = answercbuttontext.currentTitle.integerValue;
     if (buttonValue==trigcorrectanswer)
     {
         [self loadrightbox];
@@ -238,7 +240,7 @@ int trigcorrect = 0; //how many question answered correctly
 }
 
 - (IBAction)answerDbutton:(id)sender {
-    float buttonValue = answerdbuttontext.currentTitle.floatValue;
+    float buttonValue = answerdbuttontext.currentTitle.integerValue;
     if (buttonValue==trigcorrectanswer)
     {
         [self loadrightbox];
@@ -250,10 +252,10 @@ int trigcorrect = 0; //how many question answered correctly
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"segueToSummary"]){
+    if([segue.identifier isEqualToString:@"segueToTrigSummary"]){
        
-        //AlgebraSummaryViewController *controller = [segue destinationViewController];
-        //controller.questionCorrect = correct;
+        trigSummaryViewController *controller = [segue destinationViewController];
+        controller.questionCorrect =trigcorrect;
     }
 }
 

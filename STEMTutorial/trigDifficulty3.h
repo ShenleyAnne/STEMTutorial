@@ -33,13 +33,13 @@ int _x;
 int _y;
 int _angleA;
 int _angleB;
-float _answer;
+int _answer;
 }
 
 //create an triangle where you have to work out a angle. returns the question
 -(NSString *)createTriangle:(int)side1:(int)side2;
 
 
--(float)answer;
+-(int)answer;
 
 @end

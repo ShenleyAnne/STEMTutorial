@@ -9,11 +9,11 @@
             <objects>
                 <viewController title="home" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="chalkboard.jpg" id="9Sl-At-wuS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.27843138579999999" green="0.28627452250000002" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
@@ -83,11 +83,11 @@
             <objects>
                 <viewController title="trigOptions" id="qc2-CG-s0q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4c-Vt-EK7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="7OI-5D-MmD">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="-44" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vKa-OX-kE5">
@@ -289,7 +289,7 @@
                         <outlet property="correctAnswer" destination="mEv-TH-1yd" id="8Bq-Oz-nue"/>
                         <outlet property="questionNumber" destination="lf2-zA-gBo" id="kC4-RW-dEI"/>
                         <outlet property="questionTextField" destination="3kk-to-epq" id="6TW-fh-ytI"/>
-                        <segue destination="k3n-qb-dHP" kind="push" id="DTE-va-Hj0"/>
+                        <segue destination="k3n-qb-dHP" kind="push" identifier="segueToTrigSummary" id="DTE-va-Hj0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vab-fu-KRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -301,11 +301,11 @@
             <objects>
                 <viewController title="volareaoptions" id="phN-cF-LCB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4y-6g-CCq">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="uM1-YD-74c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OYi-eV-CUF">
@@ -361,11 +361,11 @@
             <objects>
                 <viewController title="volAreaQuizView" id="amQ-ec-Prv" customClass="volAreaQuizViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpt-aN-aX5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="SS1-E1-uFV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ykh-4A-jo5">
@@ -477,11 +477,11 @@
             <objects>
                 <viewController title="algebraSummaryViewController" id="lLE-od-vfQ" customClass="AlgebraSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3be-Ho-mQ5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="bhi-FS-DL0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wzN-uT-AEj">
@@ -550,11 +550,11 @@
             <objects>
                 <viewController title="algebraOptions" id="Naw-QQ-mOe" customClass="algebraOptionsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1m-w2-fr1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="wxk-ES-wSW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JPE-wU-hdq">
@@ -631,11 +631,11 @@
             <objects>
                 <viewController title="algebraQuiz" id="XRG-N9-v91" customClass="algebraQuizViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZh-A0-DSq">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="N5v-VQ-3VM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WTK-aT-Uzt">
@@ -743,11 +743,11 @@
             <objects>
                 <viewController storyboardIdentifier="algebraTutorial" title="algebraTutorial" id="wL5-9a-yQs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGL-QR-l9z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="Dxe-7m-xGX">
-                                <rect key="frame" x="0.0" y="-7" width="320" height="423"/>
+                                <rect key="frame" x="0.0" y="-7" width="320" height="467"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -759,10 +759,10 @@
             </objects>
             <point key="canvasLocation" x="2673" y="-614"/>
         </scene>
-        <!--Algebra Summary View Controller - trigSummaryViewController-->
+        <!--Trig Summary View Controller - trigSummaryViewController-->
         <scene sceneID="mjD-jz-pfg">
             <objects>
-                <viewController title="trigSummaryViewController" id="k3n-qb-dHP" customClass="AlgebraSummaryViewController" sceneMemberID="viewController">
+                <viewController title="trigSummaryViewController" id="k3n-qb-dHP" customClass="trigSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aDV-W2-WB8">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -784,7 +784,7 @@
                                 </state>
                                 <connections>
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="lYd-wx-faZ"/>
-                                    <action selector="retryButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="VqX-99-VgA"/>
+                                    <action selector="retryButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="cD1-Rg-U2S"/>
                                     <segue destination="TaU-lt-5iK" kind="push" id="uSg-HM-1fF"/>
                                 </connections>
                             </button>
@@ -801,7 +801,7 @@
                                 </state>
                                 <connections>
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="e4P-l7-TAe"/>
-                                    <action selector="menuButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="zwZ-Ip-xgb"/>
+                                    <action selector="menuButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="DQh-WJ-edX"/>
                                     <segue destination="2" kind="push" id="ZQE-Xl-fej"/>
                                 </connections>
                             </button>
@@ -824,8 +824,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="LmQ-Kz-A7s"/>
                     <connections>
-                        <outlet property="correctLabel" destination="OoM-0E-jHU" id="Q8b-VB-6Xk"/>
-                        <outlet property="summaryLabel" destination="Lci-ua-RdD" id="QMc-P7-jca"/>
+                        <outlet property="correctLabel" destination="OoM-0E-jHU" id="gft-O8-jhK"/>
+                        <outlet property="summaryLabel" destination="Lci-ua-RdD" id="YDu-pd-Tha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlc-Ob-Kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -884,6 +884,15 @@
                 <relationship kind="outlet" name="questionTextField" candidateClass="UITextView"/>
             </relationships>
         </class>
+        <class className="trigSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/trigSummaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="retryButton:"/>
+                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="volAreaQuizViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/volAreaQuizViewController.h"/>
             <relationships>
@@ -907,8 +916,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ihw-dP-kmf"/>
         <segue reference="Nf9-zP-0IZ"/>
+        <segue reference="ZQE-Xl-fej"/>
         <segue reference="uSg-HM-1fF"/>
     </inferredMetricsTieBreakers>
 </document>

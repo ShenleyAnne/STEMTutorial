@@ -81,7 +81,10 @@
 }
 
 
--(float)answer{
+-(int)answer{
+    
+    //int temp = _answer*100;
+    //_answer = temp /100;
     
     return _answer;
 }

@@ -30,7 +30,7 @@
 		DAAE0B66165BECCF005EB6DC /* algebra3variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE0B65165BECCF005EB6DC /* algebra3variable.m */; };
 		DAE1B528169AD7D700560A19 /* trigDifficulty2.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1B527169AD7D700560A19 /* trigDifficulty2.m */; };
 		DAEA69DE1667CF380007BD85 /* algebraDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */; };
-		DAF7755B16A0307D00497329 /* trigSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF7755A16A0307D00497329 /* trigSummaryViewController.m */; };
+		DAFA8EEA16A70C390076F8FE /* trigSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFA8EE916A70C390076F8FE /* trigSummaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,8 +75,8 @@
 		DAE1B527169AD7D700560A19 /* trigDifficulty2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulty2.m; sourceTree = "<group>"; };
 		DAEA69DC1667CF380007BD85 /* algebraDifficulty3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebraDifficulty3.h; sourceTree = "<group>"; };
 		DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebraDifficulty3.m; sourceTree = "<group>"; };
-		DAF7755916A0307D00497329 /* trigSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigSummaryViewController.h; sourceTree = "<group>"; };
-		DAF7755A16A0307D00497329 /* trigSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigSummaryViewController.m; sourceTree = "<group>"; };
+		DAFA8EE816A70C390076F8FE /* trigSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigSummaryViewController.h; sourceTree = "<group>"; };
+		DAFA8EE916A70C390076F8FE /* trigSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigSummaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,6 @@
 				DAE1B527169AD7D700560A19 /* trigDifficulty2.m */,
 				DA220E8B1695DAAC004A58D6 /* trigQuizViewController.h */,
 				DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */,
-				DAF7755916A0307D00497329 /* trigSummaryViewController.h */,
-				DAF7755A16A0307D00497329 /* trigSummaryViewController.m */,
 				DA47F3C31652B2DD00CCE464 /* AppDelegate.h */,
 				DA47F3C41652B2DD00CCE464 /* AppDelegate.m */,
 				DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */,
@@ -155,6 +153,8 @@
 				DA47F3C91652B2DD00CCE464 /* ViewController.h */,
 				DAA25A89167B2A91007AA6CD /* AlgebraSummaryViewController.h */,
 				DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */,
+				DAFA8EE816A70C390076F8FE /* trigSummaryViewController.h */,
+				DAFA8EE916A70C390076F8FE /* trigSummaryViewController.m */,
 				DA47F3CA1652B2DD00CCE464 /* ViewController.m */,
 				DA47F3BB1652B2DD00CCE464 /* Supporting Files */,
 			);
@@ -254,7 +254,7 @@
 				DA220E911695E7EC004A58D6 /* trigDifficulty1.m in Sources */,
 				DAE1B528169AD7D700560A19 /* trigDifficulty2.m in Sources */,
 				DAAC9C88169B2AFE0005FF62 /* trigDifficulty3.m in Sources */,
-				DAF7755B16A0307D00497329 /* trigSummaryViewController.m in Sources */,
+				DAFA8EEA16A70C390076F8FE /* trigSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

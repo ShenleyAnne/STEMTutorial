@@ -227,9 +227,10 @@ int correct = 0;
         
     [self viewDidLoad];
     }else{
+        
+        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
         questionCount=1;
         correct = 0;
-        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
     }
     
     
@@ -306,8 +307,7 @@ int correct = 0;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToSummary"]){
-        //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        //AlgebraSummaryViewController *controller = (AlgebraSummaryViewController *)navController.topViewController;
+    
         AlgebraSummaryViewController *controller = [segue destinationViewController];
         controller.questionCorrect = correct;
     }
