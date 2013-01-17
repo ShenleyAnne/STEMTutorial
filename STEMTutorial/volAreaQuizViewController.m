@@ -9,6 +9,7 @@
 #import "volAreaQuizViewController.h"
 #import "VolAreaDifficulty1.h"
 #import "VolAreaDifficulty2.h"
+#import "volAreaSummaryViewController.h"
 
 @implementation volAreaQuizViewController
 @synthesize correctAnswer;
@@ -19,7 +20,7 @@
 @synthesize answercbuttontext2;
 @synthesize answerdbuttontext;
 
-float VAcorrectanswer; //correct answer defined here, set in each method
+int VAcorrectanswer; //correct answer defined here, set in each method
 int VAquestionCount = 1; //what question number user is on
 int VAcorrect = 0; //how many question user has gotten correct
 
@@ -101,7 +102,7 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%f", VAcorrectanswer];
+    NSString *answer = [NSString stringWithFormat:@"%d", VAcorrectanswer];
     if (i==1)
     {
         
@@ -147,9 +148,10 @@ int VAcorrect = 0; //how many question user has gotten correct
         
         [self viewDidLoad];
     }else{
+        
+        [self performSegueWithIdentifier:@"summarySegue" sender:self];
         VAcorrect = 0;
         VAquestionCount = 1;
-        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
     }
     
     
@@ -246,10 +248,26 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    //[self callDifficulty1];
-    [self callDifficulty2];
+    int qtype = arc4random()%2;
+    if (qtype==0)
+    {
+        [self callDifficulty1];
+    }else{
+        [self callDifficulty2];
+    }
+    
+  
     [self changeButtonAnswers];
     
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"summarySegue"]){
+        
+        volAreaSummaryViewController *controller = [segue destinationViewController];
+        controller.questionCorrect = VAcorrect;
+    }
     
 }
 

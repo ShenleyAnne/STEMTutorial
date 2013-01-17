@@ -16,8 +16,8 @@
     int _x; //base
     int _y; //height
     int _z; //depth
-    float _area; //answer for area questions
-    float _volume; //answer for volume questions
+    int _area; //answer for area questions
+    int _volume; //answer for volume questions
     
 }
 
@@ -36,9 +36,9 @@
 -(void)setZ:(int)z;
 -(int)z;
 
--(float)solveArea;
+-(int)solveArea;
 
--(float)solveVolume;
+-(int)solveVolume;
 
 -(NSString *)questionAREA;
 -(NSString *)questionVOLUME;

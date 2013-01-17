@@ -188,19 +188,18 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    [self callTrigD3];
-    //[self callTrigD1];
-    /*
+    
+    
     int *typeQ = arc4random()%3;
     if (typeQ==0)
     {
-        
+        [self callTrigD1];
     }else if (typeQ==1){
-        
+        [self callTrigD2];
     }else{
-        
+        [self callTrigD3];
     }
-    */
+    
     
     [self changeButtonAnswers];
     

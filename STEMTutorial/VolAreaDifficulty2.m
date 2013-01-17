@@ -52,7 +52,7 @@
 
 // 0 cylinder, 1 squarebased pyramid, 2 cube, 3 cone
 
--(float)solveArea
+-(int)solveArea
 {
     float r = _x /2;
     if (_shape==0)
@@ -77,7 +77,7 @@
    
 }
 
--(float)solveVolume
+-(int)solveVolume
 {
     float r = _x/2;
     if (_shape==0)
