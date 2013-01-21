@@ -282,11 +282,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "STEMTutorial/algebraTutViewController.m"
-         timestampString = "380129531.358438"
+         timestampString = "380463951.286745"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
          landmarkName = "-swipey:"
          landmarkType = "5">
       </FileBreakpoint>

@@ -755,6 +755,9 @@
                                 <rect key="frame" x="0.0" y="-7" width="320" height="467"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PkX-K1-SGE" appends="YES" id="skV-IL-Qrr"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -771,6 +774,11 @@
                 <swipeGestureRecognizer direction="right" id="uXA-hb-gQe">
                     <connections>
                         <action selector="swipey:" destination="wL5-9a-yQs" id="DHt-GP-bEY"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="PkX-K1-SGE">
+                    <connections>
+                        <action selector="swipeyToTheLeft:" destination="wL5-9a-yQs" id="UFq-YG-I4c"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

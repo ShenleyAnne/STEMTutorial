@@ -11,5 +11,7 @@
 @interface algebraTutViewController : UIViewController
 - (IBAction)swipey:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *tutImages;
+@property (nonatomic) int currentImage;
 
+- (IBAction)swipeyToTheLeft:(id)sender;
 @end
