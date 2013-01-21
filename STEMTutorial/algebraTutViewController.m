@@ -59,6 +59,21 @@
     
 }
 
+- (IBAction)swipeyToTheLeft:(id)sender {
+    
+    if (self.currentImage==11)
+    {
+        NSString *imageString = [NSString stringWithFormat:@"%d.jpg",1];
+        self.currentImage= 1;
+        [self swipeLeftAction:imageString];
+    }else{
+        NSString *imageString = [NSString stringWithFormat:@"%d.jpg",([self currentImage]+1)];
+        self.currentImage= ([self currentImage]+1);
+        [self swipeLeftAction:imageString];
+        
+    }
+}
+
 -(void)swipeLeftAction:(NSString *)inString
 {
     [UIView transitionWithView:self.tutImages
@@ -89,18 +104,5 @@
     [super viewDidUnload];
 }
 
-- (IBAction)swipeyToTheLeft:(id)sender {
-    
-    if (self.currentImage=11)
-    {
-        NSString *imageString = [NSString stringWithFormat:@"%d.jpg",1];
-        self.currentImage= 1;
-        [self swipeLeftAction:imageString];
-    }else{
-        NSString *imageString = [NSString stringWithFormat:@"%d.jpg",([self currentImage]+1)];
-        self.currentImage= ([self currentImage]+1);
-        [self swipeLeftAction:imageString];
-        
-    }
-}
+
 @end
