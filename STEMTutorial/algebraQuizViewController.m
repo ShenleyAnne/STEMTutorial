@@ -10,6 +10,7 @@
 #import "algebra2variable.h"
 #import "algebra3variable.h"
 #import "algebraDifficulty3.h"
+#import "AlgebraDifficulties.h"
 #import "AlgebraSummaryViewController.h"
 #include <stdlib.h>
 
@@ -236,6 +237,29 @@ int correct = 0;
     
 }
 
+-(void)refactoredCallQuestion
+{
+    
+    int qtype = arc4random()%3;
+    AlgebraDifficulties *question = [[AlgebraDifficulties alloc]init];
+    NSString *equation;
+    if (qtype==0)
+    {
+       equation = [question createQD1];
+    }else if(qtype==1)
+    {
+        equation=[question createQD2];
+    }else{
+        equation= [question createQD3];
+    }
+    
+    NSString *q = @"Solve Y for the equation: ";
+    NSString *textQuestion = [q stringByAppendingString:(equation)];
+    [questionTextfield setText:(textQuestion)];
+    correctanswer = [question answer];
+    
+}
+
 
 -(void)viewDidLoad
 {
@@ -248,7 +272,7 @@ int correct = 0;
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [coorectAnswers setText:(correctCountText)];
-    int *typeQ = arc4random()%3;
+   /* int *typeQ = arc4random()%3;
     if (typeQ==0)
     {
         [self call2variablealgebra];
@@ -259,7 +283,9 @@ int correct = 0;
     }
     
     [self changeButtonAnswers];
-    
+    */
+    [self refactoredCallQuestion];
+    [self changeButtonAnswers];
     }
 
 

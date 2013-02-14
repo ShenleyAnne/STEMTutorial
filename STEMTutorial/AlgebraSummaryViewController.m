@@ -11,6 +11,7 @@
 @implementation AlgebraSummaryViewController
 
 @synthesize questionCorrect;
+@synthesize topic;
 @synthesize summaryLabel;
 @synthesize correctLabel;
 

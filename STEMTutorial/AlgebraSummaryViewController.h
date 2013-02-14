@@ -11,7 +11,7 @@
 @interface AlgebraSummaryViewController : UIViewController
 
 @property(nonatomic) int questionCorrect;
-
+@property(nonatomic) int topic;
 @property (strong, nonatomic) IBOutlet UITextView *summaryLabel;
 @property (strong, nonatomic) IBOutlet UILabel *correctLabel;
 - (IBAction)retryButton:(id)sender;
