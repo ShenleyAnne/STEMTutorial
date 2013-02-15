@@ -293,12 +293,87 @@
                         <outlet property="correctAnswer" destination="mEv-TH-1yd" id="8Bq-Oz-nue"/>
                         <outlet property="questionNumber" destination="lf2-zA-gBo" id="kC4-RW-dEI"/>
                         <outlet property="questionTextField" destination="3kk-to-epq" id="6TW-fh-ytI"/>
-                        <segue destination="k3n-qb-dHP" kind="push" identifier="segueToTrigSummary" id="DTE-va-Hj0"/>
+                        <segue destination="pzj-To-01F" kind="push" identifier="segueToSummary" id="ohK-HP-Jkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vab-fu-KRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="870"/>
+            <point key="canvasLocation" x="2413" y="592"/>
+        </scene>
+        <!--All Summary View Controller-->
+        <scene sceneID="Biq-4F-AAw">
+            <objects>
+                <viewController id="pzj-To-01F" customClass="allSummaryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KVm-rZ-CeO">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="je6-3R-JFf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="JLL-2l-SVV">
+                                <rect key="frame" x="10" y="10" width="303" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" id="QE2-TO-0zu">
+                                <rect key="frame" x="40" y="152" width="241" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxC-ao-cSY">
+                                <rect key="frame" x="84" y="239" width="152" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="91Q-E2-MUq"/>
+                                    <action selector="retryButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="355-AN-z9J"/>
+                                    <action selector="retryButton:" destination="pzj-To-01F" eventType="touchUpInside" id="J9u-zw-mv3"/>
+                                    <segue destination="TaU-lt-5iK" kind="push" identifier="retryTrig" id="bDq-8i-a7x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gx-8Y-Td8">
+                                <rect key="frame" x="84" y="300" width="152" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="YkT-LT-PE7"/>
+                                    <action selector="menuButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="Itf-de-3oZ"/>
+                                    <action selector="menuButton:" destination="pzj-To-01F" eventType="touchUpInside" id="nLI-qO-Kfn"/>
+                                    <segue destination="2" kind="push" identifier="segueToMenu" id="paA-ft-ZOF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hJm-mI-dzM"/>
+                    <connections>
+                        <outlet property="correctLabel" destination="QE2-TO-0zu" id="1x8-WQ-GLp"/>
+                        <outlet property="summaryLabel" destination="JLL-2l-SVV" id="vpe-Ak-Wdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIY-x6-c5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3046" y="610"/>
         </scene>
         <!--View Controller - volareaoptions-->
         <scene sceneID="ECH-O2-um4">
@@ -455,7 +530,7 @@
                                 <rect key="frame" x="9" y="60" width="303" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -470,17 +545,17 @@
                         <outlet property="correctAnswer" destination="2tA-qW-d9m" id="QJj-aN-pdt"/>
                         <outlet property="questionNumber" destination="otD-rL-zQ2" id="Nde-AM-xmA"/>
                         <outlet property="questionTextfield" destination="dIQ-3X-X3l" id="lVi-jp-fXL"/>
-                        <segue destination="H8r-SQ-MN6" kind="push" identifier="summarySegue" id="i57-7v-X4H"/>
+                        <segue destination="scd-dm-d7F" kind="push" identifier="segueToSummary" id="oM4-XO-ALQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQz-Jb-AxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="154"/>
+            <point key="canvasLocation" x="2721" y="-76"/>
         </scene>
-        <!--Algebra Summary View Controller - algebraSummaryViewController-->
+        <!--All Summary View Controller - algebraSummaryViewController-->
         <scene sceneID="kei-Za-Ibd">
             <objects>
-                <viewController title="algebraSummaryViewController" id="lLE-od-vfQ" customClass="AlgebraSummaryViewController" sceneMemberID="viewController">
+                <viewController title="algebraSummaryViewController" id="lLE-od-vfQ" customClass="allSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3be-Ho-mQ5">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -502,8 +577,8 @@
                                 </state>
                                 <connections>
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="bRu-Dn-fea"/>
-                                    <action selector="retryButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="DLa-dV-zA7"/>
-                                    <segue destination="XRG-N9-v91" kind="push" id="7oa-Zi-w7J"/>
+                                    <action selector="retryButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="ltZ-uz-GKE"/>
+                                    <segue destination="XRG-N9-v91" kind="push" identifier="retryToAlgebra" id="Onu-ju-6Ca"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kwf-jE-PeW">
@@ -542,13 +617,87 @@
                     </view>
                     <navigationItem key="navigationItem" id="frG-ZF-aRj"/>
                     <connections>
-                        <outlet property="correctLabel" destination="Eyd-mE-qEe" id="FxT-tn-XMR"/>
-                        <outlet property="summaryLabel" destination="g3F-A8-GgU" id="XwW-wB-w7o"/>
+                        <outlet property="correctLabel" destination="Eyd-mE-qEe" id="A0g-YS-sUa"/>
+                        <outlet property="summaryLabel" destination="g3F-A8-GgU" id="Hoa-pe-5TU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8D-kQ-DhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="-905"/>
+            <point key="canvasLocation" x="3707" y="-891"/>
+        </scene>
+        <!--All Summary View Controller-->
+        <scene sceneID="vMJ-kM-EML">
+            <objects>
+                <viewController id="scd-dm-d7F" customClass="allSummaryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOR-Cz-Awp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="ohG-oH-2xg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="8vi-6n-L90">
+                                <rect key="frame" x="9" y="10" width="303" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" id="Xud-Xi-jve">
+                                <rect key="frame" x="40" y="212" width="241" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SZs-mH-za9">
+                                <rect key="frame" x="84" y="379" width="152" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="Ci1-66-BiT"/>
+                                    <action selector="menuButton:" destination="scd-dm-d7F" eventType="touchUpInside" id="pyu-mF-X2p"/>
+                                    <action selector="menuButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="qKk-S0-d0B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="chd-Od-4Ae">
+                                <rect key="frame" x="84" y="322" width="152" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="Dwr-Kq-YLG"/>
+                                    <action selector="retryButton:" destination="lLE-od-vfQ" eventType="touchUpInside" id="NIg-Ag-4lR"/>
+                                    <action selector="retryButton:" destination="scd-dm-d7F" eventType="touchUpInside" id="WqW-lR-UAk"/>
+                                    <segue destination="amQ-ec-Prv" kind="push" identifier="retryVol" id="FO1-Oi-emx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3h8-tF-Bm1"/>
+                    <connections>
+                        <outlet property="correctLabel" destination="Xud-Xi-jve" id="JUN-Ut-5uk"/>
+                        <outlet property="summaryLabel" destination="8vi-6n-L90" id="5g5-C5-Eb4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeP-MP-Yva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200" y="-76"/>
         </scene>
         <!--Algebra Options View Controller - algebraOptions-->
         <scene sceneID="rtR-pf-80L">
@@ -741,7 +890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qst-UH-4gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="-1339"/>
+            <point key="canvasLocation" x="2998" y="-831"/>
         </scene>
         <!--Algebra Tut View Controller - algebraTutorial-->
         <scene sceneID="38Z-gY-EHK">
@@ -782,151 +931,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2673" y="-614"/>
-        </scene>
-        <!--Trig Summary View Controller - trigSummaryViewController-->
-        <scene sceneID="mjD-jz-pfg">
-            <objects>
-                <viewController title="trigSummaryViewController" id="k3n-qb-dHP" customClass="trigSummaryViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aDV-W2-WB8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="55O-qF-loq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qW6-Wr-okQ">
-                                <rect key="frame" x="84" y="249" width="152" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                <state key="normal" title="Retry">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="lYd-wx-faZ"/>
-                                    <action selector="retryButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="cD1-Rg-U2S"/>
-                                    <segue destination="TaU-lt-5iK" kind="push" id="uSg-HM-1fF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VqF-cG-ODe">
-                                <rect key="frame" x="84" y="306" width="152" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="e4P-l7-TAe"/>
-                                    <action selector="menuButton:" destination="k3n-qb-dHP" eventType="touchUpInside" id="DQh-WJ-edX"/>
-                                    <segue destination="2" kind="push" id="ZQE-Xl-fej"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" id="OoM-0E-jHU">
-                                <rect key="frame" x="40" y="136" width="241" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="Lci-ua-RdD">
-                                <rect key="frame" x="9" y="0.0" width="303" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="LmQ-Kz-A7s"/>
-                    <connections>
-                        <outlet property="correctLabel" destination="OoM-0E-jHU" id="gft-O8-jhK"/>
-                        <outlet property="summaryLabel" destination="Lci-ua-RdD" id="YDu-pd-Tha"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlc-Ob-Kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2067" y="1053"/>
-        </scene>
-        <!--Vol Area Summary View Controller - volAreaSummaryViewController-->
-        <scene sceneID="Bza-8G-F4M">
-            <objects>
-                <viewController title="volAreaSummaryViewController" id="H8r-SQ-MN6" customClass="volAreaSummaryViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fU7-lQ-2bK">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="WH9-rt-cPa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kir-XS-fvt">
-                                <rect key="frame" x="84" y="249" width="152" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                <state key="normal" title="Retry">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="fw3-lK-VNy"/>
-                                    <action selector="retryButton:" destination="H8r-SQ-MN6" eventType="touchUpInside" id="3jI-Sr-LQh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I9E-6F-R0l">
-                                <rect key="frame" x="84" y="306" width="152" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="kKU-uE-m9r"/>
-                                    <action selector="menuButton:" destination="H8r-SQ-MN6" eventType="touchUpInside" id="8x1-Yk-tgY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" id="fm0-MX-gRO">
-                                <rect key="frame" x="40" y="136" width="241" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="rOX-Wo-JKH">
-                                <rect key="frame" x="9" y="0.0" width="303" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Z15-eR-6hG"/>
-                    <connections>
-                        <outlet property="correctLabel" destination="fm0-MX-gRO" id="kqC-7V-pUW"/>
-                        <outlet property="summaryLabel" destination="rOX-Wo-JKH" id="7id-L9-qpB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p1F-2T-3xZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3215" y="177"/>
+            <point key="canvasLocation" x="2181" y="-558"/>
         </scene>
     </scenes>
     <resources>
@@ -935,15 +940,6 @@
         <image name="trigd2triangle.jpg" width="170" height="148"/>
     </resources>
     <classes>
-        <class className="AlgebraSummaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlgebraSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButton:"/>
-                <relationship kind="action" name="retryButton:"/>
-                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
-            </relationships>
-        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
         </class>
@@ -974,6 +970,15 @@
                 <relationship kind="outlet" name="tutImages" candidateClass="UIImageView"/>
             </relationships>
         </class>
+        <class className="allSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/allSummaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButton:"/>
+                <relationship kind="action" name="retryButton:"/>
+                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="trigQuizViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/trigQuizViewController.h"/>
             <relationships>
@@ -988,15 +993,6 @@
                 <relationship kind="outlet" name="correctAnswer" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="questionNumber" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="questionTextField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="trigSummaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/trigSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButton:"/>
-                <relationship kind="action" name="retryButton:"/>
-                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="volAreaQuizViewController" superclassName="UIViewController">
@@ -1015,15 +1011,6 @@
                 <relationship kind="outlet" name="questionTextfield" candidateClass="UITextView"/>
             </relationships>
         </class>
-        <class className="volAreaSummaryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/volAreaSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButton:"/>
-                <relationship kind="action" name="retryButton:"/>
-                <relationship kind="outlet" name="correctLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="summaryLabel" candidateClass="UITextView"/>
-            </relationships>
-        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1031,8 +1018,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nf9-zP-0IZ"/>
-        <segue reference="ZQE-Xl-fej"/>
-        <segue reference="uSg-HM-1fF"/>
+        <segue reference="paA-ft-ZOF"/>
+        <segue reference="bDq-8i-a7x"/>
+        <segue reference="FO1-Oi-emx"/>
+        <segue reference="Onu-ju-6Ca"/>
     </inferredMetricsTieBreakers>
 </document>

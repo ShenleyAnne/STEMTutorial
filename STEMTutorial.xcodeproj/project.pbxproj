@@ -35,6 +35,7 @@
 		DA9A673D165581D100CC679C /* algebraOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A673C165581D100CC679C /* algebraOptionsViewController.m */; };
 		DA9A67411655835200CC679C /* algebraQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A67401655835200CC679C /* algebraQuizViewController.m */; };
 		DA9A67441655885A00CC679C /* algebra2variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A67431655885A00CC679C /* algebra2variable.m */; };
+		DAA2599216CD6BC5007F8925 /* allSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2599116CD6BC5007F8925 /* allSummaryViewController.m */; };
 		DAA25A8B167B2A91007AA6CD /* AlgebraSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */; };
 		DAA25A8F167B4318007AA6CD /* volAreaQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */; };
 		DAAB64B216A81EAF001EDC79 /* trigd2triangle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAAB64B116A81EAF001EDC79 /* trigd2triangle.jpg */; };
@@ -42,6 +43,7 @@
 		DAAB64BC16A84D20001EDC79 /* algebraTutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB64BB16A84D1F001EDC79 /* algebraTutViewController.m */; };
 		DAAC9C88169B2AFE0005FF62 /* trigDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */; };
 		DAAE0B66165BECCF005EB6DC /* algebra3variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE0B65165BECCF005EB6DC /* algebra3variable.m */; };
+		DAB03BD916CE3E2100B5EE64 /* volAreaDifficulties.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB03BD816CE3E2100B5EE64 /* volAreaDifficulties.m */; };
 		DAE1B528169AD7D700560A19 /* trigDifficulty2.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1B527169AD7D700560A19 /* trigDifficulty2.m */; };
 		DAE6253E16B9533F00DCA45A /* AlgebraDifficulties.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE6253D16B9533F00DCA45A /* AlgebraDifficulties.m */; };
 		DAEA69DE1667CF380007BD85 /* algebraDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */; };
@@ -89,6 +91,8 @@
 		DA9A67401655835200CC679C /* algebraQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebraQuizViewController.m; sourceTree = "<group>"; };
 		DA9A67421655885A00CC679C /* algebra2variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebra2variable.h; sourceTree = "<group>"; };
 		DA9A67431655885A00CC679C /* algebra2variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebra2variable.m; sourceTree = "<group>"; };
+		DAA2599016CD6BC5007F8925 /* allSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allSummaryViewController.h; sourceTree = "<group>"; };
+		DAA2599116CD6BC5007F8925 /* allSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allSummaryViewController.m; sourceTree = "<group>"; };
 		DAA25A89167B2A91007AA6CD /* AlgebraSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgebraSummaryViewController.h; sourceTree = "<group>"; };
 		DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgebraSummaryViewController.m; sourceTree = "<group>"; };
 		DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = volAreaQuizViewController.h; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulty3.m; sourceTree = "<group>"; };
 		DAAE0B64165BECCF005EB6DC /* algebra3variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebra3variable.h; sourceTree = "<group>"; };
 		DAAE0B65165BECCF005EB6DC /* algebra3variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebra3variable.m; sourceTree = "<group>"; };
+		DAB03BD716CE3E2100B5EE64 /* volAreaDifficulties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = volAreaDifficulties.h; path = ../volAreaDifficulties.h; sourceTree = "<group>"; };
+		DAB03BD816CE3E2100B5EE64 /* volAreaDifficulties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = volAreaDifficulties.m; path = ../volAreaDifficulties.m; sourceTree = "<group>"; };
 		DAE1B526169AD7D700560A19 /* trigDifficulty2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigDifficulty2.h; sourceTree = "<group>"; };
 		DAE1B527169AD7D700560A19 /* trigDifficulty2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulty2.m; sourceTree = "<group>"; };
 		DAE6253C16B9533F00DCA45A /* AlgebraDifficulties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgebraDifficulties.h; sourceTree = "<group>"; };
@@ -156,25 +162,19 @@
 		DA47F3BA1652B2DD00CCE464 /* STEMTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				DAAB64B716A837B8001EDC79 /* volAreaSummaryViewController.h */,
-				DAAB64B816A837B8001EDC79 /* volAreaSummaryViewController.m */,
 				DAAC9C86169B2AFE0005FF62 /* trigDifficulty3.h */,
 				DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */,
 				DA220E8F1695E7EC004A58D6 /* trigDifficulty1.h */,
 				DA220E901695E7EC004A58D6 /* trigDifficulty1.m */,
 				DAE1B526169AD7D700560A19 /* trigDifficulty2.h */,
 				DAE1B527169AD7D700560A19 /* trigDifficulty2.m */,
-				DA220E8B1695DAAC004A58D6 /* trigQuizViewController.h */,
-				DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */,
 				DA47F3C31652B2DD00CCE464 /* AppDelegate.h */,
 				DA47F3C41652B2DD00CCE464 /* AppDelegate.m */,
 				DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */,
 				DAAB64BA16A84D1F001EDC79 /* algebraTutViewController.h */,
 				DAAB64BB16A84D1F001EDC79 /* algebraTutViewController.m */,
-				DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */,
-				DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */,
-				DA9A673F1655835200CC679C /* algebraQuizViewController.h */,
-				DA9A67401655835200CC679C /* algebraQuizViewController.m */,
+				DAB03BD716CE3E2100B5EE64 /* volAreaDifficulties.h */,
+				DAB03BD816CE3E2100B5EE64 /* volAreaDifficulties.m */,
 				DA48F2361668094E00C2ED7E /* VolAreaDifficulty1.h */,
 				DA48F2371668094E00C2ED7E /* VolAreaDifficulty1.m */,
 				DA48F23A16680B1D00C2ED7E /* VolAreaDifficulty2.h */,
@@ -187,9 +187,19 @@
 				DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */,
 				DAAE0B64165BECCF005EB6DC /* algebra3variable.h */,
 				DAAE0B65165BECCF005EB6DC /* algebra3variable.m */,
+				DA47F3C91652B2DD00CCE464 /* ViewController.h */,
 				DA9A673B165581D100CC679C /* algebraOptionsViewController.h */,
 				DA9A673C165581D100CC679C /* algebraOptionsViewController.m */,
-				DA47F3C91652B2DD00CCE464 /* ViewController.h */,
+				DA220E8B1695DAAC004A58D6 /* trigQuizViewController.h */,
+				DA220E8C1695DAAC004A58D6 /* trigQuizViewController.m */,
+				DAA25A8D167B4318007AA6CD /* volAreaQuizViewController.h */,
+				DAA25A8E167B4318007AA6CD /* volAreaQuizViewController.m */,
+				DA9A673F1655835200CC679C /* algebraQuizViewController.h */,
+				DA9A67401655835200CC679C /* algebraQuizViewController.m */,
+				DAA2599016CD6BC5007F8925 /* allSummaryViewController.h */,
+				DAA2599116CD6BC5007F8925 /* allSummaryViewController.m */,
+				DAAB64B716A837B8001EDC79 /* volAreaSummaryViewController.h */,
+				DAAB64B816A837B8001EDC79 /* volAreaSummaryViewController.m */,
 				DAA25A89167B2A91007AA6CD /* AlgebraSummaryViewController.h */,
 				DAA25A8A167B2A91007AA6CD /* AlgebraSummaryViewController.m */,
 				DAFA8EE816A70C390076F8FE /* trigSummaryViewController.h */,
@@ -321,6 +331,8 @@
 				DAAB64B916A837B8001EDC79 /* volAreaSummaryViewController.m in Sources */,
 				DAAB64BC16A84D20001EDC79 /* algebraTutViewController.m in Sources */,
 				DAE6253E16B9533F00DCA45A /* AlgebraDifficulties.m in Sources */,
+				DAA2599216CD6BC5007F8925 /* allSummaryViewController.m in Sources */,
+				DAB03BD916CE3E2100B5EE64 /* volAreaDifficulties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

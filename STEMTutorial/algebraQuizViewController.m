@@ -11,6 +11,7 @@
 #import "algebra3variable.h"
 #import "algebraDifficulty3.h"
 #import "AlgebraDifficulties.h"
+#import "allSummaryViewController.h"
 #import "AlgebraSummaryViewController.h"
 #include <stdlib.h>
 
@@ -272,7 +273,7 @@ int correct = 0;
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [coorectAnswers setText:(correctCountText)];
-   /* int *typeQ = arc4random()%3;
+    int *typeQ = arc4random()%3;
     if (typeQ==0)
     {
         [self call2variablealgebra];
@@ -283,8 +284,8 @@ int correct = 0;
     }
     
     [self changeButtonAnswers];
-    */
-    [self refactoredCallQuestion];
+    
+    //[self refactoredCallQuestion];
     [self changeButtonAnswers];
     }
 
@@ -334,8 +335,9 @@ int correct = 0;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToSummary"]){
     
-        AlgebraSummaryViewController *controller = [segue destinationViewController];
+        allSummaryViewController *controller = [segue destinationViewController];
         controller.questionCorrect = correct;
+        controller.topic = 0; //algebra topic
     }
 
 }
