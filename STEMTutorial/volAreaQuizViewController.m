@@ -10,6 +10,7 @@
 #import "VolAreaDifficulty1.h"
 #import "VolAreaDifficulty2.h"
 #import "volAreaSummaryViewController.h"
+#import "volAreaDifficulties.h"
 #import "allSummaryViewController.h"
 
 @implementation volAreaQuizViewController
@@ -97,9 +98,9 @@ int VAcorrect = 0; //how many question user has gotten correct
     //retrieves the correct answer for the current question, sets one of the buttons to this answer and changes the other 3 buttons to random answer. Button where correct answer is stored is based on a random number.
     int j = VAcorrectanswer+20;
     int i = (arc4random()%4)+1;
-    int otherans1 = arc4random() %j;
-    int otherans2 = arc4random() %j;
-    int otherans3 = arc4random() %j;
+    int otherans1 = (arc4random() %j)+1;
+    int otherans2 = (arc4random() %j)+1;
+    int otherans3 = (arc4random() %j)+1;
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
@@ -193,6 +194,9 @@ int VAcorrect = 0; //how many question user has gotten correct
     }
 }
 
+- (IBAction)quitButton:(id)sender {
+}
+
 
 
 
@@ -207,6 +211,22 @@ int VAcorrect = 0; //how many question user has gotten correct
     }else{
         [self loadwrongbox];
     }
+}
+
+
+-(void)callRefactoredDifficulty
+{
+    int type = arc4random()%2;
+    volAreaDifficulties *question = [[volAreaDifficulties alloc]init];
+    if (type==0)
+    {
+        [questionTextfield setText:([question createQD1])];
+    }else{
+        [questionTextfield setText:([question createQD2])];
+    }
+    VAcorrectanswer = [question answer];
+    
+    
 }
 
 -(void)callDifficulty1{
@@ -241,6 +261,8 @@ int VAcorrect = 0; //how many question user has gotten correct
 
 - (void)viewDidLoad
 {
+   // [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     NSString *qnumstring = [NSString stringWithFormat:@"%d", VAquestionCount];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", VAcorrect];
     NSString *question = @"Question: ";
@@ -249,14 +271,15 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    int qtype = arc4random()%2;
+    /*int qtype = arc4random()%2;
     if (qtype==0)
     {
         [self callDifficulty1];
     }else{
         [self callDifficulty2];
     }
-    
+     */
+    [self callRefactoredDifficulty];
   
     [self changeButtonAnswers];
     

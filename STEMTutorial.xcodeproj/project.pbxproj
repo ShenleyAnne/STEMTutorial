@@ -44,6 +44,9 @@
 		DAAC9C88169B2AFE0005FF62 /* trigDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */; };
 		DAAE0B66165BECCF005EB6DC /* algebra3variable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE0B65165BECCF005EB6DC /* algebra3variable.m */; };
 		DAB03BD916CE3E2100B5EE64 /* volAreaDifficulties.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB03BD816CE3E2100B5EE64 /* volAreaDifficulties.m */; };
+		DAB03BDC16CE504800B5EE64 /* trigDifficulties.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB03BDB16CE504800B5EE64 /* trigDifficulties.m */; };
+		DAB03BDE16CE579800B5EE64 /* T1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAB03BDD16CE579800B5EE64 /* T1.jpg */; };
+		DAB03BE016CE57A200B5EE64 /* VA1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAB03BDF16CE57A200B5EE64 /* VA1.jpg */; };
 		DAE1B528169AD7D700560A19 /* trigDifficulty2.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1B527169AD7D700560A19 /* trigDifficulty2.m */; };
 		DAE6253E16B9533F00DCA45A /* AlgebraDifficulties.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE6253D16B9533F00DCA45A /* AlgebraDifficulties.m */; };
 		DAEA69DE1667CF380007BD85 /* algebraDifficulty3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */; };
@@ -108,6 +111,10 @@
 		DAAE0B65165BECCF005EB6DC /* algebra3variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = algebra3variable.m; sourceTree = "<group>"; };
 		DAB03BD716CE3E2100B5EE64 /* volAreaDifficulties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = volAreaDifficulties.h; path = ../volAreaDifficulties.h; sourceTree = "<group>"; };
 		DAB03BD816CE3E2100B5EE64 /* volAreaDifficulties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = volAreaDifficulties.m; path = ../volAreaDifficulties.m; sourceTree = "<group>"; };
+		DAB03BDA16CE504800B5EE64 /* trigDifficulties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigDifficulties.h; sourceTree = "<group>"; };
+		DAB03BDB16CE504800B5EE64 /* trigDifficulties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulties.m; sourceTree = "<group>"; };
+		DAB03BDD16CE579800B5EE64 /* T1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = T1.jpg; sourceTree = "<group>"; };
+		DAB03BDF16CE57A200B5EE64 /* VA1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VA1.jpg; sourceTree = "<group>"; };
 		DAE1B526169AD7D700560A19 /* trigDifficulty2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigDifficulty2.h; sourceTree = "<group>"; };
 		DAE1B527169AD7D700560A19 /* trigDifficulty2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trigDifficulty2.m; sourceTree = "<group>"; };
 		DAE6253C16B9533F00DCA45A /* AlgebraDifficulties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgebraDifficulties.h; sourceTree = "<group>"; };
@@ -162,12 +169,6 @@
 		DA47F3BA1652B2DD00CCE464 /* STEMTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				DAAC9C86169B2AFE0005FF62 /* trigDifficulty3.h */,
-				DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */,
-				DA220E8F1695E7EC004A58D6 /* trigDifficulty1.h */,
-				DA220E901695E7EC004A58D6 /* trigDifficulty1.m */,
-				DAE1B526169AD7D700560A19 /* trigDifficulty2.h */,
-				DAE1B527169AD7D700560A19 /* trigDifficulty2.m */,
 				DA47F3C31652B2DD00CCE464 /* AppDelegate.h */,
 				DA47F3C41652B2DD00CCE464 /* AppDelegate.m */,
 				DA47F3C61652B2DD00CCE464 /* MainStoryboard.storyboard */,
@@ -187,6 +188,14 @@
 				DAEA69DD1667CF380007BD85 /* algebraDifficulty3.m */,
 				DAAE0B64165BECCF005EB6DC /* algebra3variable.h */,
 				DAAE0B65165BECCF005EB6DC /* algebra3variable.m */,
+				DAB03BDA16CE504800B5EE64 /* trigDifficulties.h */,
+				DAB03BDB16CE504800B5EE64 /* trigDifficulties.m */,
+				DA220E8F1695E7EC004A58D6 /* trigDifficulty1.h */,
+				DA220E901695E7EC004A58D6 /* trigDifficulty1.m */,
+				DAE1B526169AD7D700560A19 /* trigDifficulty2.h */,
+				DAE1B527169AD7D700560A19 /* trigDifficulty2.m */,
+				DAAC9C86169B2AFE0005FF62 /* trigDifficulty3.h */,
+				DAAC9C87169B2AFE0005FF62 /* trigDifficulty3.m */,
 				DA47F3C91652B2DD00CCE464 /* ViewController.h */,
 				DA9A673B165581D100CC679C /* algebraOptionsViewController.h */,
 				DA9A673C165581D100CC679C /* algebraOptionsViewController.m */,
@@ -213,6 +222,8 @@
 		DA47F3BB1652B2DD00CCE464 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAB03BDF16CE57A200B5EE64 /* VA1.jpg */,
+				DAB03BDD16CE579800B5EE64 /* T1.jpg */,
 				DA52187C16A8501C0023EF1A /* 1.jpg */,
 				DA52187D16A8501C0023EF1A /* 2.jpg */,
 				DA52187E16A8501C0023EF1A /* 3.jpg */,
@@ -301,6 +312,8 @@
 				DA52188F16A8501C0023EF1A /* 9.jpg in Resources */,
 				DA52189016A8501C0023EF1A /* 10.jpg in Resources */,
 				DA52189116A8501C0023EF1A /* 11.jpg in Resources */,
+				DAB03BDE16CE579800B5EE64 /* T1.jpg in Resources */,
+				DAB03BE016CE57A200B5EE64 /* VA1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +346,7 @@
 				DAE6253E16B9533F00DCA45A /* AlgebraDifficulties.m in Sources */,
 				DAA2599216CD6BC5007F8925 /* allSummaryViewController.m in Sources */,
 				DAB03BD916CE3E2100B5EE64 /* volAreaDifficulties.m in Sources */,
+				DAB03BDC16CE504800B5EE64 /* trigDifficulties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad
 {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", questionCorrect];
     NSString *questions = @"You got ";
     NSString *correctCountText = [questions stringByAppendingFormat:(qscorrect)];

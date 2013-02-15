@@ -22,5 +22,6 @@
 - (IBAction)answerCbutton:(id)sender;
 - (IBAction)answerDbutton:(id)sender;
 - (IBAction)answerBButton2:(id)sender;
+- (IBAction)quitButton:(id)sender;
 
 @end

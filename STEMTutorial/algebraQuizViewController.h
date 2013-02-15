@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *answerbbuttontext;
 @property (strong, nonatomic) IBOutlet UIButton *answercbuttontext;
 @property (strong, nonatomic) IBOutlet UIButton *answerdbuttontext; //Answer buttons - outlets, for text etc.
+- (IBAction)quitButton:(id)sender;
 
 
 

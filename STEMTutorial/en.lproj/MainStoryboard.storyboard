@@ -9,11 +9,11 @@
             <objects>
                 <viewController title="home" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="chalkboard.jpg" id="9Sl-At-wuS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.27843138579999999" green="0.28627452250000002" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
@@ -78,16 +78,38 @@
             </objects>
             <point key="canvasLocation" x="999" y="-107"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="W6q-rD-KnS">
+            <objects>
+                <viewController id="o1K-OU-KAT" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TnA-ai-f2Q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="T1.jpg" id="6XZ-Wv-glw">
+                                <rect key="frame" x="0.0" y="-44" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.27843138579999999" green="0.28627452250000002" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Crn-3w-3EL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS6-ZL-6v4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="1045"/>
+        </scene>
         <!--View Controller - trigOptions-->
         <scene sceneID="be7-n3-IP4">
             <objects>
                 <viewController title="trigOptions" id="qc2-CG-s0q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4c-Vt-EK7">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="7OI-5D-MmD">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="-44" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vKa-OX-kE5">
@@ -137,6 +159,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="o1K-OU-KAT" kind="push" id="J9m-XK-OW8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPi-Oq-CcL">
                                 <rect key="frame" x="84" y="257" width="152" height="37"/>
@@ -172,18 +197,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bo5-k5-6Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="442"/>
+            <point key="canvasLocation" x="1639" y="740"/>
         </scene>
         <!--Trig Quiz View Controller - TrigQuizViewConroller-->
         <scene sceneID="pyi-Bd-6Ez">
             <objects>
                 <viewController title="TrigQuizViewConroller" id="TaU-lt-5iK" customClass="trigQuizViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2r-a9-ZaA">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="sGi-Tg-FUV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hhk-DW-LUX">
@@ -281,6 +306,24 @@
                                 <rect key="frame" x="87" y="200" width="147" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1C5-Tn-UiO">
+                                <rect key="frame" x="9" y="422" width="56" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="6Yq-nx-maB"/>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="iDZ-tJ-Slp"/>
+                                    <action selector="quitButton:" destination="TaU-lt-5iK" eventType="touchUpInside" id="enb-AQ-Xsw"/>
+                                    <segue destination="qc2-CG-s0q" kind="push" id="xFQ-uU-CSc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -298,18 +341,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vab-fu-KRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413" y="592"/>
+            <point key="canvasLocation" x="2435" y="980"/>
         </scene>
         <!--All Summary View Controller-->
         <scene sceneID="Biq-4F-AAw">
             <objects>
                 <viewController id="pzj-To-01F" customClass="allSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KVm-rZ-CeO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="je6-3R-JFf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="JLL-2l-SVV">
@@ -373,18 +416,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIY-x6-c5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3046" y="610"/>
+            <point key="canvasLocation" x="3070" y="1150"/>
         </scene>
         <!--View Controller - volareaoptions-->
         <scene sceneID="ECH-O2-um4">
             <objects>
                 <viewController title="volareaoptions" id="phN-cF-LCB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4y-6g-CCq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="uM1-YD-74c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OYi-eV-CUF">
@@ -425,6 +468,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Q5X-1w-gko" kind="push" id="Upj-uQ-Fch"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -440,11 +486,11 @@
             <objects>
                 <viewController title="volAreaQuizView" id="amQ-ec-Prv" customClass="volAreaQuizViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpt-aN-aX5">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="SS1-E1-uFV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ykh-4A-jo5">
@@ -492,6 +538,24 @@
                                 <connections>
                                     <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="6Fz-48-BU3"/>
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="olH-YY-S84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DtK-7i-Ggx">
+                                <rect key="frame" x="9" y="421" width="56" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="ArL-qb-Let"/>
+                                    <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="Ghj-P3-t0e"/>
+                                    <action selector="quitButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="hI1-Qw-Nts"/>
+                                    <segue destination="phN-cF-LCB" kind="push" id="YdW-NC-arw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kka-bJ-fH0">
@@ -550,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQz-Jb-AxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="-76"/>
+            <point key="canvasLocation" x="2507" y="288"/>
         </scene>
         <!--All Summary View Controller - algebraSummaryViewController-->
         <scene sceneID="kei-Za-Ibd">
@@ -623,18 +687,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8D-kQ-DhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="-891"/>
+            <point key="canvasLocation" x="2677" y="-1155"/>
         </scene>
         <!--All Summary View Controller-->
         <scene sceneID="vMJ-kM-EML">
             <objects>
                 <viewController id="scd-dm-d7F" customClass="allSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOR-Cz-Awp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="ohG-oH-2xg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Summary here" textAlignment="center" id="8vi-6n-L90">
@@ -697,18 +761,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeP-MP-Yva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200" y="-76"/>
+            <point key="canvasLocation" x="3290" y="464"/>
         </scene>
         <!--Algebra Options View Controller - algebraOptions-->
         <scene sceneID="rtR-pf-80L">
             <objects>
                 <viewController title="algebraOptions" id="Naw-QQ-mOe" customClass="algebraOptionsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1m-w2-fr1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chalkboard.jpg" id="wxk-ES-wSW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JPE-wU-hdq">
@@ -852,6 +916,24 @@
                                     <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="a76-eM-X6H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zST-Dm-oEu">
+                                <rect key="frame" x="9" y="419" width="56" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerAButton:" destination="amQ-ec-Prv" eventType="touchUpInside" id="PM4-2e-Pno"/>
+                                    <action selector="answerAButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="Zgf-GX-hAh"/>
+                                    <action selector="quitButton:" destination="XRG-N9-v91" eventType="touchUpInside" id="82O-RB-2Oc"/>
+                                    <segue destination="Naw-QQ-mOe" kind="push" id="mkQ-kZ-dAy"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Question here" textAlignment="center" id="CcX-Wp-4Qy">
                                 <rect key="frame" x="9" y="61" width="303" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -890,18 +972,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qst-UH-4gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2998" y="-831"/>
+            <point key="canvasLocation" x="2220" y="-953"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8ke-N5-gOw">
+            <objects>
+                <viewController id="Q5X-1w-gko" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPS-tY-GLZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="VA1.jpg" id="zkK-oz-wLU">
+                                <rect key="frame" x="0.0" y="-44" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.27843138579999999" green="0.28627452250000002" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zOV-f6-9hv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zn5-Vz-MsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="-359"/>
         </scene>
         <!--Algebra Tut View Controller - algebraTutorial-->
         <scene sceneID="38Z-gY-EHK">
             <objects>
                 <viewController storyboardIdentifier="algebraTutorial" title="algebraTutorial" id="wL5-9a-yQs" customClass="algebraTutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGL-QR-l9z">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" image="1.jpg" id="Dxe-7m-xGX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="467"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="423"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -931,11 +1035,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2181" y="-558"/>
+            <point key="canvasLocation" x="1505" y="-1230"/>
         </scene>
     </scenes>
     <resources>
         <image name="1.jpg" width="640" height="960"/>
+        <image name="T1.jpg" width="640" height="960"/>
+        <image name="VA1.jpg" width="640" height="960"/>
         <image name="chalkboard.jpg" width="1269" height="948"/>
         <image name="trigd2triangle.jpg" width="170" height="148"/>
     </resources>
@@ -953,6 +1059,7 @@
                 <relationship kind="action" name="answerBbutton:"/>
                 <relationship kind="action" name="answerCbutton:"/>
                 <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="action" name="quitButton:"/>
                 <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
@@ -986,6 +1093,7 @@
                 <relationship kind="action" name="answerBButton2:"/>
                 <relationship kind="action" name="answerCbutton:"/>
                 <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="action" name="quitButton:"/>
                 <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answercbuttontext" candidateClass="UIButton"/>
@@ -1002,6 +1110,7 @@
                 <relationship kind="action" name="answerBbutton:"/>
                 <relationship kind="action" name="answerCButton2:"/>
                 <relationship kind="action" name="answerDbutton:"/>
+                <relationship kind="action" name="quitButton:"/>
                 <relationship kind="outlet" name="answerAbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answerbbuttontext" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answercbuttontext2" candidateClass="UIButton"/>
@@ -1018,9 +1127,12 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="paA-ft-ZOF"/>
-        <segue reference="bDq-8i-a7x"/>
-        <segue reference="FO1-Oi-emx"/>
+        <segue reference="Rzn-5w-88S"/>
+        <segue reference="ihw-dP-kmf"/>
+        <segue reference="u4h-2K-OOB"/>
+        <segue reference="IJD-Tp-7LI"/>
+        <segue reference="Tzb-pw-eaA"/>
+        <segue reference="Zvv-i5-2bD"/>
         <segue reference="Onu-ju-6Ca"/>
     </inferredMetricsTieBreakers>
 </document>

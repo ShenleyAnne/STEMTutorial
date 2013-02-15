@@ -12,6 +12,7 @@
 #import "trigDifficulty3.h"
 #import "trigSummaryViewController.h"
 #import "allSummaryViewController.h"
+#import "trigDifficulties.h"
 
 @implementation trigQuizViewController
 @synthesize questionNumber;
@@ -180,7 +181,8 @@ int trigcorrect = 0; //how many question answered correctly
 
 -(void)viewDidLoad
 {
-    
+   [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     NSString *qnumstring = [NSString stringWithFormat:@"%d", trigquestionCount];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", trigcorrect];
     NSString *question = @"Question: ";
@@ -190,7 +192,7 @@ int trigcorrect = 0; //how many question answered correctly
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
     
-    
+    /*
     int *typeQ = arc4random()%3;
     if (typeQ==0)
     {
@@ -200,9 +202,28 @@ int trigcorrect = 0; //how many question answered correctly
     }else{
         [self callTrigD3];
     }
-    
-    
+    */
+    [self callRefactoredDifficulty];
     [self changeButtonAnswers];
+    
+}
+
+-(void)callRefactoredDifficulty
+{
+    
+    trigDifficulties *question = [[trigDifficulties alloc]init];
+    int type = arc4random()%3;
+    if (type==0)
+    {
+        [questionTextField setText:([question createQD1])];
+    }else if (type==1){
+        [questionTextField setText:([question createQD2])];
+        
+    }else{
+        
+        [questionTextField setText:([question createQD3])];
+    }
+    trigcorrectanswer=[question answer];
     
 }
 
@@ -227,6 +248,9 @@ int trigcorrect = 0; //how many question answered correctly
     }else{
         [self loadwrongbox];
     }
+}
+
+- (IBAction)quitButton:(id)sender {
 }
 
 - (IBAction)answerCbutton:(id)sender {

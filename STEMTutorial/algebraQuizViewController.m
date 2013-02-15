@@ -264,7 +264,8 @@ int correct = 0;
 
 -(void)viewDidLoad
 {
-    
+   // [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     NSString *qnumstring = [NSString stringWithFormat:@"%d", questionCount];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", correct];
     NSString *question = @"Question: ";
@@ -342,4 +343,6 @@ int correct = 0;
 
 }
 
+- (IBAction)quitButton:(id)sender {
+}
 @end
