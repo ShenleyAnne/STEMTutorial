@@ -10,6 +10,7 @@
 #import "VolAreaDifficulty1.h"
 #import "VolAreaDifficulty2.h"
 #import "volAreaSummaryViewController.h"
+#import "allSummaryViewController.h"
 
 @implementation volAreaQuizViewController
 @synthesize correctAnswer;
@@ -149,7 +150,7 @@ int VAcorrect = 0; //how many question user has gotten correct
         [self viewDidLoad];
     }else{
         
-        [self performSegueWithIdentifier:@"summarySegue" sender:self];
+        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
         VAcorrect = 0;
         VAquestionCount = 1;
     }
@@ -263,10 +264,11 @@ int VAcorrect = 0; //how many question user has gotten correct
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"summarySegue"]){
+    if([segue.identifier isEqualToString:@"segueToSummary"]){
         
-        volAreaSummaryViewController *controller = [segue destinationViewController];
+        allSummaryViewController *controller = [segue destinationViewController];
         controller.questionCorrect = VAcorrect;
+        controller.topic = 2; 
     }
     
 }

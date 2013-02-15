@@ -11,6 +11,7 @@
 #import "trigDifficulty2.h"
 #import "trigDifficulty3.h"
 #import "trigSummaryViewController.h"
+#import "allSummaryViewController.h"
 
 @implementation trigQuizViewController
 @synthesize questionNumber;
@@ -136,7 +137,7 @@ int trigcorrect = 0; //how many question answered correctly
         [self viewDidLoad];
     }else{
     
-        [self performSegueWithIdentifier:@"segueToTrigSummary" sender:self];
+        [self performSegueWithIdentifier:@"segueToSummary" sender:self];
         trigquestionCount=1;
         trigcorrect = 0;
     }
@@ -251,10 +252,11 @@ int trigcorrect = 0; //how many question answered correctly
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"segueToTrigSummary"]){
+    if([segue.identifier isEqualToString:@"segueToSummary"]){
        
-        trigSummaryViewController *controller = [segue destinationViewController];
+        allSummaryViewController *controller = [segue destinationViewController];
         controller.questionCorrect =trigcorrect;
+        controller.topic = 1;
     }
 }
 
