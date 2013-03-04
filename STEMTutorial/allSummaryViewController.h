@@ -12,6 +12,8 @@
 
 @property(nonatomic) int questionCorrect;
 @property(nonatomic) int topic;
+@property(nonatomic) int type;
+@property(nonatomic) int questionsAsked;
 @property (strong, nonatomic) IBOutlet UITextView *summaryLabel;
 @property (strong, nonatomic) IBOutlet UILabel *correctLabel;
 - (IBAction)retryButton:(id)sender;

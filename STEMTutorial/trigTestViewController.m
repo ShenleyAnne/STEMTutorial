@@ -1,18 +1,17 @@
 //
-//  VolAreaTestViewController.m
+//  trigTestViewController.m
 //  STEMTutorial
 //
 //  Created by Shenley Gallimore on 04/03/2013.
 //
 //
 
-#import "VolAreaTestViewController.h"
-#import "volAreaDifficulties.h"
+#import "trigTestViewController.h"
 #import "allSummaryViewController.h"
+#import "trigDifficulties.h"
 
-@interface VolAreaTestViewController ()
+@interface trigTestViewController ()
 {
-    
     NSTimer *timer;
     int curMinute;
     int curSecond;
@@ -20,19 +19,19 @@
 
 @end
 
-@implementation VolAreaTestViewController
+@implementation trigTestViewController
+@synthesize questionTextField;
 @synthesize answerAbuttontext;
 @synthesize answerbbuttontext;
 @synthesize answercbuttontext;
 @synthesize answerdbuttontext;
-@synthesize questionTextField;
 @synthesize correctLabel;
 @synthesize timerLabel;
-@synthesize correctAnswers;
 
-int correctAnswerVATest=0;
-int questionsCountVATest=1;
-int correctVATest=0;
+int trigCorrectAnswerTest=0;
+int trigQuestionCountTest=1;
+int trigCorrectTest=0;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,9 +42,23 @@ int correctVATest=0;
     return self;
 }
 
+-(void)loadwrongbox
+{
+    UIAlertView *wrongbox = [[UIAlertView alloc]initWithTitle:(@"Wrong") message:(@"Wrong answer :(") delegate:self cancelButtonTitle:(@"Ok") otherButtonTitles:nil, nil];
+    [wrongbox show];
+    
+}
+
+-(void)loadrightbox
+{
+    UIAlertView *correctbox = [[UIAlertView alloc]initWithTitle:(@"Correct") message:(@"Correct answer!") delegate:self cancelButtonTitle:(@"ok") otherButtonTitles:nil, nil];
+    [correctbox show];
+    trigCorrectTest++;
+}
+
 - (void)viewDidLoad
 {
-    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctVATest,questionsCountVATest];
+    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", trigCorrectTest,trigQuestionCountTest];
     NSString *correctString = @"Correct ";
     NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
     [correctLabel setText:(correctCountText)];
@@ -56,7 +69,6 @@ int correctVATest=0;
     [self callRefactoredDifficulty];
     [self changeButtonAnswers];
     [self start];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,44 +82,13 @@ int correctVATest=0;
     [self setCorrectLabel:nil];
     [self setQuestionTextField:nil];
     [self setAnswerAbuttontext:nil];
+    [self setAnswerAbuttontext:nil];
     [self setAnswerbbuttontext:nil];
     [self setAnswercbuttontext:nil];
     [self setAnswerdbuttontext:nil];
     [super viewDidUnload];
 }
 
--(void)newQuestion
-{
-    [self callRefactoredDifficulty];
-    [self changeButtonAnswers];
-    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctVATest,questionsCountVATest];
-    NSString *correctString = @"Correct ";
-    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
-    [correctLabel setText:(correctCountText)];
-    
-}
-
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    questionsCountVATest++;
-    [self newQuestion];
-    
-}
-
--(void)callRefactoredDifficulty
-{
-    int type = arc4random()%2;
-    volAreaDifficulties *question = [[volAreaDifficulties alloc]init];
-    if (type==0)
-    {
-        [questionTextField setText:([question createQD1])];
-    }else{
-        [questionTextField setText:([question createQD2])];
-    }
-    correctAnswerVATest = [question answer];
-    
-    
-}
 
 -(void)start
 {
@@ -134,81 +115,25 @@ int correctVATest=0;
     {
         [timer invalidate];
         [self performSegueWithIdentifier:@"segueToSummary" sender:self];
-        questionsCountVATest=1;
-        correctVATest = 0;
+        trigQuestionCountTest=1;
+        trigCorrectTest = 0;
         
     }
     
 }
--(void)loadwrongbox
-{
-    UIAlertView *wrongbox = [[UIAlertView alloc]initWithTitle:(@"Wrong") message:(@"Wrong answer :(") delegate:self cancelButtonTitle:(@"Ok") otherButtonTitles:nil, nil];
-    [wrongbox show];
-    
-}
 
--(void)loadrightbox
-{
-    UIAlertView *correctbox = [[UIAlertView alloc]initWithTitle:(@"Correct") message:(@"Correct answer!") delegate:self cancelButtonTitle:(@"ok") otherButtonTitles:nil, nil];
-    [correctbox show];
-    correctVATest++;
-}
-
-
-    
-- (IBAction)answerAButton:(id)sender {
-    int buttonValue = answerAbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-        
-    }else{
-        [self loadwrongbox];
-    }
-}
-
-- (IBAction)answerBbutton:(id)sender {
-    int buttonValue = answerbbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
-}
-- (IBAction)answerCButton:(id)sender {
-    
-    int buttonValue = answercbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
-}
-
-- (IBAction)answerDbutton:(id)sender {
-    int buttonValue = answerdbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
-}
 
 -(void)changeButtonAnswers
 {
-    //retrieves the correct answer for the current question, sets one of the buttons to this answer and changes the other 3 buttons to random answer. Button where correct answer is stored is based on a random number.
-    int j = correctAnswerVATest+20;
-    int i = (arc4random()%4)+1;
-    int otherans1 = (arc4random() %j)+1;
-    int otherans2 = (arc4random() %j)+1;
-    int otherans3 = (arc4random() %j)+1;
+    int j = trigCorrectAnswerTest+20;
+    int i = arc4random()%4;
+    int otherans1 = arc4random() %j;
+    int otherans2 = arc4random() %j;
+    int otherans3 = arc4random() %j;
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%d", correctAnswerVATest];
+    NSString *answer = [NSString stringWithFormat:@"%d", trigCorrectAnswerTest];
     if (i==1)
     {
         
@@ -245,17 +170,101 @@ int correctVATest=0;
     }
 }
 
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    trigQuestionCountTest++;
+    [self newQuestion];
+
+    
+    
+}
+
+-(void)newQuestion
+{
+    [self callRefactoredDifficulty];
+    [self changeButtonAnswers];
+    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", trigCorrectTest, trigQuestionCountTest];
+    NSString *correctString = @"Correct ";
+    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
+    [correctLabel setText:(correctCountText)];
+}
+
+
+-(void)callRefactoredDifficulty
+{
+    
+    trigDifficulties *question = [[trigDifficulties alloc]init];
+    int type = arc4random()%3;
+    if (type==0)
+    {
+        [questionTextField setText:([question createQD1])];
+    }else if (type==1){
+        [questionTextField setText:([question createQD2])];
+        
+    }else{
+        
+        [questionTextField setText:([question createQD3])];
+    }
+    trigCorrectAnswerTest=[question answer];
+    
+}
+
+
+- (IBAction)answerAButton:(id)sender {
+    float buttonValue = answerAbuttontext.currentTitle.integerValue;
+    if (buttonValue==trigCorrectAnswerTest)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+- (IBAction)answerBButton:(id)sender {
+    
+    float buttonValue = answerbbuttontext.currentTitle.integerValue;
+    if (buttonValue==trigCorrectAnswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+- (IBAction)answerCButton:(id)sender {
+    
+    float buttonValue = answercbuttontext.currentTitle.integerValue;
+    if (buttonValue==trigCorrectAnswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+- (IBAction)answerDButotn:(id)sender {
+    
+    float buttonValue = answerdbuttontext.currentTitle.integerValue;
+    if (buttonValue==trigCorrectAnswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToSummary"]){
         
         allSummaryViewController *controller = [segue destinationViewController];
-        controller.questionCorrect = correctVATest;
-        controller.questionsAsked = questionsCountVATest;
-        controller.topic = 2; //volArea topic
+        controller.questionCorrect = trigCorrectTest;
+        controller.questionsAsked = trigQuestionCountTest;
+        controller.topic = 1; //trig topic
         controller.type =0; //test
     }
 }
 
-- (IBAction)quidButton:(id)sender {
+- (IBAction)quitButton:(id)sender {
 }
 @end

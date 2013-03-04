@@ -1,16 +1,18 @@
 //
-//  VolAreaTestViewController.m
+//  algebraTestViewController.m
 //  STEMTutorial
 //
 //  Created by Shenley Gallimore on 04/03/2013.
 //
 //
 
-#import "VolAreaTestViewController.h"
-#import "volAreaDifficulties.h"
+#import "algebraTestViewController.h"
+#import "AlgebraDifficulties.h"
 #import "allSummaryViewController.h"
+#import <Foundation/Foundation.h>
 
-@interface VolAreaTestViewController ()
+
+@interface algebraTestViewController ()
 {
     
     NSTimer *timer;
@@ -20,19 +22,20 @@
 
 @end
 
-@implementation VolAreaTestViewController
+@implementation algebraTestViewController
 @synthesize answerAbuttontext;
 @synthesize answerbbuttontext;
 @synthesize answercbuttontext;
 @synthesize answerdbuttontext;
 @synthesize questionTextField;
-@synthesize correctLabel;
 @synthesize timerLabel;
-@synthesize correctAnswers;
+@synthesize correctLabel;
 
-int correctAnswerVATest=0;
-int questionsCountVATest=1;
-int correctVATest=0;
+
+int correctanswerTest = 0; //correct answer defined here, set in each method
+int questionCountTest = 1;
+int correctTest = 0;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,16 +48,17 @@ int correctVATest=0;
 
 - (void)viewDidLoad
 {
-    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctVATest,questionsCountVATest];
-    NSString *correctString = @"Correct ";
-    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
+    
+     NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctTest,questionCountTest];
+     NSString *correctString = @"Correct ";
+     NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
     [correctLabel setText:(correctCountText)];
     [timerLabel setText:@"Time: 3:00"];
     [timerLabel setTextColor:[UIColor redColor]];
     curMinute=2;
     curSecond=60;
-    [self callRefactoredDifficulty];
-    [self changeButtonAnswers];
+     [self refactoredCallQuestion];
+     [self changeButtonAnswers];
     [self start];
 	// Do any additional setup after loading the view.
 }
@@ -74,39 +78,6 @@ int correctVATest=0;
     [self setAnswercbuttontext:nil];
     [self setAnswerdbuttontext:nil];
     [super viewDidUnload];
-}
-
--(void)newQuestion
-{
-    [self callRefactoredDifficulty];
-    [self changeButtonAnswers];
-    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctVATest,questionsCountVATest];
-    NSString *correctString = @"Correct ";
-    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
-    [correctLabel setText:(correctCountText)];
-    
-}
-
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    questionsCountVATest++;
-    [self newQuestion];
-    
-}
-
--(void)callRefactoredDifficulty
-{
-    int type = arc4random()%2;
-    volAreaDifficulties *question = [[volAreaDifficulties alloc]init];
-    if (type==0)
-    {
-        [questionTextField setText:([question createQD1])];
-    }else{
-        [questionTextField setText:([question createQD2])];
-    }
-    correctAnswerVATest = [question answer];
-    
-    
 }
 
 -(void)start
@@ -134,12 +105,53 @@ int correctVATest=0;
     {
         [timer invalidate];
         [self performSegueWithIdentifier:@"segueToSummary" sender:self];
-        questionsCountVATest=1;
-        correctVATest = 0;
+        questionCountTest=1;
+        correctTest = 0;
         
     }
-    
 }
+-(IBAction)answerAButton:(id)sender {
+    int buttonValue = answerAbuttontext.currentTitle.intValue;
+    if (buttonValue==correctanswerTest)
+    {
+        [self loadrightbox];
+        
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+
+- (IBAction)answerBbutton:(id)sender {
+    int buttonValue = answerbbuttontext.currentTitle.intValue;
+    if (buttonValue==correctanswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+- (IBAction)answerCbutton:(id)sender {
+    int buttonValue = answercbuttontext.currentTitle.intValue;
+    if (buttonValue==correctanswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
+- (IBAction)answerDbutton:(id)sender {
+    int buttonValue = answerdbuttontext.currentTitle.intValue;
+    if (buttonValue==correctanswerTest)
+    {
+        [self loadrightbox];
+    }else{
+        [self loadwrongbox];
+    }
+}
+
 -(void)loadwrongbox
 {
     UIAlertView *wrongbox = [[UIAlertView alloc]initWithTitle:(@"Wrong") message:(@"Wrong answer :(") delegate:self cancelButtonTitle:(@"Ok") otherButtonTitles:nil, nil];
@@ -151,64 +163,20 @@ int correctVATest=0;
 {
     UIAlertView *correctbox = [[UIAlertView alloc]initWithTitle:(@"Correct") message:(@"Correct answer!") delegate:self cancelButtonTitle:(@"ok") otherButtonTitles:nil, nil];
     [correctbox show];
-    correctVATest++;
-}
-
-
-    
-- (IBAction)answerAButton:(id)sender {
-    int buttonValue = answerAbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-        
-    }else{
-        [self loadwrongbox];
-    }
-}
-
-- (IBAction)answerBbutton:(id)sender {
-    int buttonValue = answerbbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
-}
-- (IBAction)answerCButton:(id)sender {
-    
-    int buttonValue = answercbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
-}
-
-- (IBAction)answerDbutton:(id)sender {
-    int buttonValue = answerdbuttontext.currentTitle.intValue;
-    if (buttonValue==correctAnswerVATest)
-    {
-        [self loadrightbox];
-    }else{
-        [self loadwrongbox];
-    }
+    correctTest++;
 }
 
 -(void)changeButtonAnswers
 {
-    //retrieves the correct answer for the current question, sets one of the buttons to this answer and changes the other 3 buttons to random answer. Button where correct answer is stored is based on a random number.
-    int j = correctAnswerVATest+20;
-    int i = (arc4random()%4)+1;
-    int otherans1 = (arc4random() %j)+1;
-    int otherans2 = (arc4random() %j)+1;
-    int otherans3 = (arc4random() %j)+1;
+    int j = correctanswerTest+20;
+    int i = arc4random()%4;
+    int otherans1 = arc4random() %j;
+    int otherans2 = arc4random() %j;
+    int otherans3 = arc4random() %j;
     NSString *otheran1 = [NSString stringWithFormat:@"%d", otherans1];
     NSString *otheran2 = [NSString stringWithFormat:@"%d", otherans2];
     NSString *otheran3 = [NSString stringWithFormat:@"%d", otherans3];
-    NSString *answer = [NSString stringWithFormat:@"%d", correctAnswerVATest];
+    NSString *answer = [NSString stringWithFormat:@"%d", correctanswerTest];
     if (i==1)
     {
         
@@ -245,17 +213,60 @@ int correctVATest=0;
     }
 }
 
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    questionCountTest++;
+    [self newQuestion];
+    
+  
+    
+    
+}
+
+-(void)newQuestion
+{
+    [self refactoredCallQuestion];
+    [self changeButtonAnswers];
+    NSString *qscorrect = [NSString stringWithFormat:@"%d/%d", correctTest,questionCountTest];
+    NSString *correctString = @"Correct ";
+    NSString *correctCountText = [correctString stringByAppendingFormat:(qscorrect)];
+    [correctLabel setText:(correctCountText)];
+    
+}
+
+-(void)refactoredCallQuestion
+{
+    
+    int qtype = arc4random()%3;
+    AlgebraDifficulties *question = [[AlgebraDifficulties alloc]init];
+    NSString *equation;
+    if (qtype==0)
+    {
+        equation = [question createQD1];
+    }else if(qtype==1)
+    {
+        equation=[question createQD2];
+    }else{
+        equation= [question createQD3];
+    }
+    
+    NSString *q = @"Solve Y for the equation: ";
+    NSString *textQuestion = [q stringByAppendingString:(equation)];
+    [questionTextField setText:(textQuestion)];
+    correctanswerTest = [question answer];
+    
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToSummary"]){
         
         allSummaryViewController *controller = [segue destinationViewController];
-        controller.questionCorrect = correctVATest;
-        controller.questionsAsked = questionsCountVATest;
-        controller.topic = 2; //volArea topic
-        controller.type =0; //test
+        controller.questionCorrect = correctTest;
+        controller.questionsAsked = questionCountTest;
+        controller.topic = 0; //algebra topic
+        controller.type =0;
     }
+    
 }
 
-- (IBAction)quidButton:(id)sender {
-}
 @end
