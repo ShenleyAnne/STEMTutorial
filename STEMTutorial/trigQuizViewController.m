@@ -7,10 +7,6 @@
 //
 
 #import "trigQuizViewController.h"
-#import "trigDifficulty1.h"
-#import "trigDifficulty2.h"
-#import "trigDifficulty3.h"
-#import "trigSummaryViewController.h"
 #import "allSummaryViewController.h"
 #import "trigDifficulties.h"
 
@@ -146,38 +142,6 @@ int trigcorrect = 0; //how many question answered correctly
     
 }
 
--(void)callTrigD2
-{
-    trigDifficulty2 *question = [[trigDifficulty2 alloc]init];
-    [questionTextField setText:[question createTriangleSA:((arc4random()%15)+1) :((arc4random()%90)+1)]];
-    trigcorrectanswer  = [question answer];
-    
-                                
-    
-}
-
--(void)callTrigD3
-{
-    
-    trigDifficulty3 *question = [[trigDifficulty3 alloc]init];
-    [questionTextField setText:[question createTriangle:((arc4random()%15)+1) :((arc4random()%15)+1)]];
-    trigcorrectanswer = [question answer];
-    
-}
-
- 
-
--(void)callTrigD1{
-   
-    
-    trigDifficulty1 *question = [[trigDifficulty1 alloc]init];
-    [question setX:((arc4random()%15)+1)];
-    [question setY:((arc4random()%15)+1)];
-    trigcorrectanswer=[question solveZ];
-    [questionTextField setText:([question question])];
-    
-}
-
 
 -(void)viewDidLoad
 {
@@ -191,18 +155,6 @@ int trigcorrect = 0; //how many question answered correctly
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    
-    /*
-    int *typeQ = arc4random()%3;
-    if (typeQ==0)
-    {
-        [self callTrigD1];
-    }else if (typeQ==1){
-        [self callTrigD2];
-    }else{
-        [self callTrigD3];
-    }
-    */
     [self callRefactoredDifficulty];
     [self changeButtonAnswers];
     
@@ -281,6 +233,7 @@ int trigcorrect = 0; //how many question answered correctly
         allSummaryViewController *controller = [segue destinationViewController];
         controller.questionCorrect =trigcorrect;
         controller.topic = 1;
+        controller.type=1;
     }
 }
 

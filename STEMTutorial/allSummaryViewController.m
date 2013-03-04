@@ -19,6 +19,8 @@
 
 @synthesize questionCorrect;
 @synthesize topic;
+@synthesize type;
+@synthesize questionsAsked;
 @synthesize summaryLabel;
 @synthesize correctLabel;
 
@@ -34,6 +36,31 @@
 - (void)viewDidLoad
 {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+if (type==0)
+{
+    [self loadTestSummary];
+    
+}else{
+    [self loadTestSummary];
+    
+}
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [self setSummaryLabel:nil];
+    [self setCorrectLabel:nil];
+    type=nil;
+    [super viewDidUnload];
+}
+
+-(void)loadQuizSummary
+{
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", questionCorrect];
     NSString *questions = @"You got ";
     NSString *correctCountText = [questions stringByAppendingFormat:(qscorrect)];
@@ -48,20 +75,24 @@
     }else{
         summaryLabel.text = highScore;
     }
+
+    
+    
 }
 
-- (void)didReceiveMemoryWarning
+-(void)loadTestSummary
+
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSString *questions =[NSString stringWithFormat: @"You managed to answer %d out of %d questions correctly in 3 minutes. This will now be added to your totals.",questionCorrect,questionsAsked];
+    summaryLabel.text = questions;
+    
+    
+    
 }
 
-- (void)viewDidUnload {
-    [self setSummaryLabel:nil];
-    [self setCorrectLabel:nil];
-    [super viewDidUnload];
-}
 - (IBAction)retryButton:(id)sender {
+  
     if (topic==0)
     {
     [self performSegueWithIdentifier:@"retryToAlgebra" sender:self];
@@ -69,9 +100,12 @@
     {
         [self performSegueWithIdentifier:@"retryTrig" sender:self];
         
-    }else{
+    }else if(topic==2){
         [self performSegueWithIdentifier:@"retryVol" sender:self];
+    }else{
+        [self performSegueWithIdentifier:@"retryGraph" sender:self];
     }
+    
 }
 
 - (IBAction)menuButton:(id)sender {

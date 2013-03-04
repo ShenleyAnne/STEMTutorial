@@ -7,9 +7,6 @@
 //
 
 #import "volAreaQuizViewController.h"
-#import "VolAreaDifficulty1.h"
-#import "VolAreaDifficulty2.h"
-#import "volAreaSummaryViewController.h"
 #import "volAreaDifficulties.h"
 #import "allSummaryViewController.h"
 
@@ -229,39 +226,10 @@ int VAcorrect = 0; //how many question user has gotten correct
     
 }
 
--(void)callDifficulty1{
-
-    VolAreaDifficulty1 *question = [[VolAreaDifficulty1 alloc]init];
-    [question setX:((arc4random()%15)+1)];
-    [question setY:((arc4random()%15)+1)];
-    [question setShape:(arc4random()%4)];
-    VAcorrectanswer = [question solveArea];
-    [questionTextfield setText:([question question])];
-    
-     
-}
-
--(void)callDifficulty2{
-    VolAreaDifficulty2 *question = [[VolAreaDifficulty2 alloc] init];
-    [question setX:((arc4random()%15)+1)];
-    [question setY:((arc4random()%15)+1)];
-    [question setZ:((arc4random()%15)+1)];
-    [question setShape:(arc4random()%4)];
-    int type = arc4random()%2;
-    if (type ==0){
-        //a volume question
-        VAcorrectanswer = [question solveVolume];
-        [questionTextfield setText:([question questionVOLUME])];
-    } else {
-    //an area question
-        VAcorrectanswer = [question solveArea];
-        [questionTextfield setText:([question questionAREA])];
-    }
-}
 
 - (void)viewDidLoad
 {
-   // [self.navigationController setNavigationBarHidden:YES animated:YES];
+   [self.navigationController setNavigationBarHidden:YES animated:YES];
 
     NSString *qnumstring = [NSString stringWithFormat:@"%d", VAquestionCount];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", VAcorrect];
@@ -271,14 +239,6 @@ int VAcorrect = 0; //how many question user has gotten correct
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [correctAnswer setText:(correctCountText)];
-    /*int qtype = arc4random()%2;
-    if (qtype==0)
-    {
-        [self callDifficulty1];
-    }else{
-        [self callDifficulty2];
-    }
-     */
     [self callRefactoredDifficulty];
   
     [self changeButtonAnswers];

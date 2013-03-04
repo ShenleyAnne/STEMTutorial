@@ -7,12 +7,8 @@
 //
 
 #import "algebraQuizViewController.h"
-#import "algebra2variable.h"
-#import "algebra3variable.h"
-#import "algebraDifficulty3.h"
 #import "AlgebraDifficulties.h"
 #import "allSummaryViewController.h"
-#import "AlgebraSummaryViewController.h"
 #include <stdlib.h>
 
 @implementation algebraQuizViewController
@@ -86,91 +82,6 @@ int correct = 0;
     UIAlertView *correctbox = [[UIAlertView alloc]initWithTitle:(@"Correct") message:(@"Correct answer!") delegate:self cancelButtonTitle:(@"ok") otherButtonTitles:nil, nil];
     [correctbox show];
     correct++;
-}
-
--(void)calldifficulty3algerbra
-{
-    
-    algebraDifficulty3 *question = [[algebraDifficulty3 alloc]init];
-    [question setanswer:((arc4random() % 20)+1)];
-    [question setsignrandom1:(arc4random()%2)];
-    if ([question signrandom1]==1)
-    {
-        int y = [question answer];
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:(y)];
-        for (int i=1; i<=y;i++)
-        {
-            if(y%i==0)
-            {
-                [array addObject:[NSNumber numberWithInt:i]];
-            }
-        }
-        int arraycount = array.count;
-        [question setnumber:[[array objectAtIndex:(arc4random()%arraycount)]intValue]];
-        
-    }else{
-        [question setnumber:((arc4random()%14)+1)];
-    }
-    [question setnumber2:((arc4random()%9))+1];
-    [question setsignrandom2:(arc4random()%2)];
-    [question setsignAB:(arc4random()%2)];
-    [question setnumber3:((arc4random()%11)+1)];
-    [question setlhs];
-    correctanswer = [question answer];
-    NSString *equation = [question equation];
-    NSString *q = @"Solve Y for the equation: ";
-    NSString *textQuestion = [q stringByAppendingString:(equation)];
-    [questionTextfield setText:(textQuestion)];
-    
-}
-
--(void)call2variablealgebra
-{
-    algebra2variable *question = [[algebra2variable alloc]init];
-    [question setanswer:(arc4random() % 15)];
-    [question setsignrandom:(arc4random()%2)];
-    [question setnumber:(arc4random()%15)];
-    correctanswer = [question solveEquation];
-    NSString *equation = [question equation];
-    NSString *q = @"Solve Y for the equation: ";
-    NSString *textQuestion = [q stringByAppendingString:(equation)];
-    [questionTextfield setText:(textQuestion)];
-
-}
-
--(void)call3variablealgerbra
-{
-
-    algebra3variable *question = [[algebra3variable alloc]init];
-    [question setanswer:((arc4random() % 20)+1)];
-    [question setsignrandom1:(arc4random()%2)];
-    if ([question signrandom1]==1)
-    {
-        int y = [question answer];
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:(y)];
-        for (int i=1; i<=y;i++)
-        {
-        if(y%i==0)
-        {
-            [array addObject:[NSNumber numberWithInt:i]];
-        }
-        }
-        int arraycount = array.count;
-        [question setnumber:[[array objectAtIndex:(arc4random()%arraycount)]intValue]];
-        
-    }else{
-    [question setnumber:((arc4random()%14)+1)];
-    }
-    [question setnumber2:((arc4random()%9))+1];
-    [question setsignrandom2:(arc4random()%2)];
-    [question setlhs];
-    correctanswer = [question answer];
-    NSString *equation = [question equation];
-    NSString *q = @"Solve Y for the equation: ";
-    NSString *textQuestion = [q stringByAppendingString:(equation)];
-    [questionTextfield setText:(textQuestion)];
-   
-    
 }
 
 -(void)changeButtonAnswers
@@ -264,8 +175,8 @@ int correct = 0;
 
 -(void)viewDidLoad
 {
-   // [self.navigationController setNavigationBarHidden:YES animated:YES];
-
+  
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     NSString *qnumstring = [NSString stringWithFormat:@"%d", questionCount];
     NSString *qscorrect = [NSString stringWithFormat:@"%d/15", correct];
     NSString *question = @"Question: ";
@@ -274,19 +185,7 @@ int correct = 0;
     NSString *textQuestionNumber = [question stringByAppendingString:(qnumstring)];
     [questionNumber setText:(textQuestionNumber)];
     [coorectAnswers setText:(correctCountText)];
-    int *typeQ = arc4random()%3;
-    if (typeQ==0)
-    {
-        [self call2variablealgebra];
-    }else if (typeQ==1){
-        [self call3variablealgerbra];
-    }else{
-        [self calldifficulty3algerbra];
-    }
-    
-    [self changeButtonAnswers];
-    
-    //[self refactoredCallQuestion];
+    [self refactoredCallQuestion];
     [self changeButtonAnswers];
     }
 
